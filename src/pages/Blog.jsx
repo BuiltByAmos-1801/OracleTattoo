@@ -9,8 +9,10 @@ export default function Blog() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Tattoo Tips & Guides | Oracle Tattoo Blog</title>
-        <meta name="description" content="Read expert tattoo guides, aftercare tips, style breakdowns and more from Oracle Tattoo — Ranchi's premier tattoo studio." />
+        <title>Tattoo Tips Ranchi | Oracle Tattoo Blog</title>
+        <meta name="description" content="Read tattoo tips in Ranchi from Oracle Tattoo: first tattoo guidance, tattoo aftercare, style guides, religious tattoo ideas, cover-up advice, and piercing care." />
+        <meta name="keywords" content="tattoo tips Ranchi, first tattoo Ranchi, tattoo aftercare Ranchi, tattoo ideas Ranchi, religious tattoo ideas, cover up tattoo guide, Oracle Tattoo blog" />
+        <link rel="canonical" href="https://www.oracletattoo.in/blog" />
       </Helmet>
 
       <section className="page-hero">

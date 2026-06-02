@@ -10,8 +10,10 @@ export default function Artists() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Our Tattoo Artists | Oracle Tattoo Ranchi</title>
-        <meta name="description" content="Meet the skilled tattoo artists at Oracle Tattoo, Ranchi — specialists in realism, mandala, tribal, fine line, and female tattoos." />
+        <title>Best Tattoo Artists in Ranchi | Oracle Tattoo</title>
+        <meta name="description" content="Meet tattoo artists in Ranchi at Oracle Tattoo, specialists in realism tattoos, mandala tattoos, tribal work, fine line tattoos, cover-ups, and custom designs." />
+        <meta name="keywords" content="best tattoo artist in Ranchi, tattoo artists Ranchi, female tattoo artist Ranchi, realism tattoo artist Ranchi, custom tattoo artist Ranchi, Oracle Tattoo artists" />
+        <link rel="canonical" href="https://www.oracletattoo.in/artists" />
       </Helmet>
 
       <section className="page-hero">
