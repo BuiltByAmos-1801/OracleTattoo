@@ -68,8 +68,10 @@ export default function Booking() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Book a Tattoo Appointment | Oracle Tattoo Ranchi</title>
-        <meta name="description" content="Book your tattoo or piercing session at Oracle Tattoo, Ranchi. Fill the form and get instant confirmation on WhatsApp." />
+        <title>Book Tattoo Appointment in Ranchi | Oracle Tattoo</title>
+        <meta name="description" content="Book a tattoo appointment in Ranchi at Oracle Tattoo for custom tattoos, religious tattoos, cover-ups, small tattoos, couple tattoos, piercings, and first tattoo consultation." />
+        <meta name="keywords" content="book tattoo Ranchi, tattoo appointment Ranchi, tattoo in Ranchi, tattoo studio Ranchi, piercing appointment Ranchi, Oracle Tattoo booking" />
+        <link rel="canonical" href="https://www.oracletattoo.in/booking" />
       </Helmet>
 
       <section className="page-hero">

@@ -13,6 +13,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "TattooShop",
   name: "Oracle Tattoo",
+  description: "Oracle Tattoo is a tattoo studio in Ranchi, Jharkhand for custom tattoos, realism tattoos, religious tattoos, mandala tattoos, cover-up tattoos, piercings, and first-time tattoo guidance.",
   image: "",
   address: {
     "@type": "PostalAddress",
@@ -24,7 +25,11 @@ const schema = {
   },
   telephone: "+917667059851",
   openingHours: ["Mo-Sa 11:00-20:00"],
-  url: "https://www.oracletattoo.in"
+  url: "https://www.oracletattoo.in",
+  priceRange: "$$",
+  areaServed: ["Ranchi", "Tilta", "Ratu Road", "Jharkhand"],
+  keywords: "best tattoo in Ranchi, tattoo in Ranchi, tattoo studio Ranchi, tattoo shop Ranchi, tattoo artist Ranchi, piercing in Ranchi, custom tattoo Ranchi, religious tattoo Ranchi, cover-up tattoo Ranchi",
+  sameAs: ["https://www.instagram.com/oracletattooindia"]
 };
 
 const testimonials = [
@@ -91,8 +96,10 @@ export default function Home() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Oracle Tattoo | Best Tattoo Studio in Ranchi, Jharkhand</title>
-        <meta name="description" content="Oracle Tattoo — custom tattoo and piercing studio in Ranchi. Expert artists for realism, mandala, sleeve, tribal, cover-up and piercing services in Jharkhand." />
+        <title>Best Tattoo in Ranchi | Oracle Tattoo Studio Jharkhand</title>
+        <meta name="description" content="Looking for the best tattoo in Ranchi? Oracle Tattoo is a custom tattoo and piercing studio in Tilta, Ranchi for realism, mandala, religious, sleeve, cover-up, and first tattoos." />
+        <meta name="keywords" content="best tattoo in Ranchi, tattoo in Ranchi, tattoo studio Ranchi, tattoo shop Ranchi, tattoo artist Ranchi, best tattoo artist in Ranchi, piercing in Ranchi, custom tattoo Ranchi, religious tattoo Ranchi, cover up tattoo Ranchi, Oracle Tattoo Ranchi" />
+        <link rel="canonical" href="https://www.oracletattoo.in/" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
@@ -149,10 +156,10 @@ export default function Home() {
           <ScrollReveal delay={0.08}>
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Studio Introduction</p>
             <h2 className="serif-display text-[clamp(2rem,6.5vw,7.6rem)] leading-[0.94] sm:leading-[0.92]">
-              Ranchi's Premier Tattoo Studio
+              Best Tattoo Studio in Ranchi
             </h2>
             <p className="mt-6 max-w-3xl text-base leading-7 text-bone/64 sm:mt-8 sm:text-lg sm:leading-8">
-              Oracle Tattoo is built for people who want permanent work handled with taste, control, and seriousness. From first-tattoo guidance to large-scale custom pieces, every session is shaped around clean design, considered placement, and disciplined studio hygiene.
+              Oracle Tattoo is built for people searching for a trusted tattoo studio in Ranchi, from first-tattoo guidance to custom tattoos, religious tattoos, cover-ups, and large-scale pieces. Every session is shaped around clean design, considered placement, and disciplined studio hygiene.
             </p>
           </ScrollReveal>
         </div>

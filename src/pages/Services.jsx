@@ -43,8 +43,10 @@ export default function Services() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Tattoo & Piercing Services | Oracle Tattoo Ranchi</title>
-        <meta name="description" content="Explore 18+ tattoo and piercing services at Oracle Tattoo, Ranchi — custom designs, sleeves, mandala, realism, tribal, cover-ups, nose & navel piercings." />
+        <title>Tattoo Services in Ranchi | Custom Tattoos & Piercing</title>
+        <meta name="description" content="Explore tattoo services in Ranchi at Oracle Tattoo: custom tattoos, realism, religious tattoos, mandala, sleeves, cover-ups, small tattoos, couple tattoos, and safe piercings." />
+        <meta name="keywords" content="tattoo services Ranchi, tattoo in Ranchi, custom tattoo Ranchi, religious tattoo Ranchi, realism tattoo Ranchi, mandala tattoo Ranchi, piercing in Ranchi, cover up tattoo Ranchi" />
+        <link rel="canonical" href="https://www.oracletattoo.in/services" />
       </Helmet>
 
       <section className="page-hero">

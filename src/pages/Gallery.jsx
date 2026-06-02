@@ -21,8 +21,10 @@ export default function Gallery() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Tattoo Gallery | Oracle Tattoo Ranchi</title>
-        <meta name="description" content="Browse Oracle Tattoo's portfolio — realism, mandala, tribal, sleeve, lettering and piercing work by Ranchi's best tattoo artists." />
+        <title>Tattoo Gallery Ranchi | Oracle Tattoo Portfolio</title>
+        <meta name="description" content="Browse Oracle Tattoo's Ranchi tattoo portfolio: realism tattoos, mandala tattoos, religious tattoos, tribal designs, sleeve work, lettering, cover-ups, and piercings." />
+        <meta name="keywords" content="tattoo gallery Ranchi, tattoo designs Ranchi, best tattoo artist in Ranchi, religious tattoo Ranchi, mandala tattoo Ranchi, realism tattoo Ranchi, Oracle Tattoo gallery" />
+        <link rel="canonical" href="https://www.oracletattoo.in/gallery" />
       </Helmet>
 
       <section className="page-hero">

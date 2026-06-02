@@ -8,8 +8,10 @@ export default function Contact() {
   return (
     <PageTransition>
       <Helmet>
-        <title>Contact Oracle Tattoo | Tilta, Ranchi, Jharkhand</title>
-        <meta name="description" content="Visit Oracle Tattoo at NH 75, Ratu Road, Tilta, Ranchi. Call or WhatsApp: +91 76670 59851. Open Mon–Sat, 11 AM–8 PM." />
+        <title>Contact Tattoo Studio in Ranchi | Oracle Tattoo Tilta</title>
+        <meta name="description" content="Contact Oracle Tattoo, a tattoo studio in Ranchi near Ratu Road and Tilta. Call or WhatsApp +91 76670 59851 for tattoo appointments, piercings, and consultations." />
+        <meta name="keywords" content="tattoo studio Ranchi contact, tattoo shop Ranchi, Oracle Tattoo Ranchi, tattoo in Tilta Ranchi, tattoo near Ratu Road, piercing Ranchi contact" />
+        <link rel="canonical" href="https://www.oracletattoo.in/contact" />
       </Helmet>
 
       <section className="page-hero">
