@@ -73,7 +73,7 @@ export default function Gallery() {
                 transition={{ duration: 0.42, delay: index * 0.025 }}
               >
                 <div className="overflow-hidden">
-                  <img src={item.image} alt={item.title} className="h-auto w-full grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+                  <img src={item.image} alt={item.title} className="h-auto w-full transition duration-700 group-hover:scale-105" />
                 </div>
                 <div className="flex flex-col gap-2 p-4 sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:p-5">
                   <span className="font-serif text-xl sm:text-2xl">{item.title}</span>
@@ -100,7 +100,7 @@ export default function Gallery() {
             <motion.img
               src={selected.image}
               alt={selected.title}
-              className="max-h-[80vh] w-auto max-w-full border border-white/12 object-contain grayscale sm:max-h-[84vh]"
+              className="max-h-[80vh] w-auto max-w-full border border-white/12 object-contain sm:max-h-[84vh]"
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}

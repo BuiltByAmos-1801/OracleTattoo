@@ -53,7 +53,7 @@ export default function Contact() {
           <iframe
             title="Oracle Tattoo location map"
             src="https://maps.google.com/maps?q=Oracle%20Tattoo%2C%20Tilta%2C%20Ranchi%2C%20Jharkhand&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            className="h-full min-h-[320px] w-full grayscale transition duration-700 hover:grayscale-0 sm:min-h-[420px] md:min-h-[520px]"
+            className="h-full min-h-[320px] w-full transition duration-700 sm:min-h-[420px] md:min-h-[520px]"
             loading="lazy"
           />
         </ScrollReveal>

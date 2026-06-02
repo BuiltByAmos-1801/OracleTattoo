@@ -108,7 +108,7 @@ export default function Home() {
         <motion.img
           src={demoImages.hero}
           alt="Tattoo artist working in a monochrome studio"
-          className="absolute right-0 top-0 hidden h-full w-[42vw] object-cover opacity-28 grayscale xl:block"
+          className="absolute right-0 top-0 hidden h-full w-[42vw] object-cover opacity-28 xl:block"
           style={{ y: heroImageY }}
         />
         <motion.div className="section-shell relative z-10" style={{ y: heroY, opacity: heroOpacity }}>
@@ -148,7 +148,7 @@ export default function Home() {
             <img
               src={jennyOracleTattoo}
               alt="Oracle Tattoo studio artist"
-              className="aspect-[4/5] w-full object-cover object-center opacity-88 grayscale mix-blend-luminosity transition duration-700 hover:scale-105 hover:opacity-100 hover:grayscale-0 hover:mix-blend-normal sm:aspect-[16/13] lg:aspect-[4/5]"
+              className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
             />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_42%,#050505_100%)]" />
             <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-r from-transparent to-coal lg:block" />
@@ -211,7 +211,7 @@ export default function Home() {
                 delay={index * 0.05}
                 className={`overflow-hidden border border-white/10 bg-ink ${index === 0 ? "md:col-span-2 md:row-span-2" : ""} ${index === 3 ? "md:col-span-2" : ""}`}
               >
-                <img src={image} alt="Oracle Tattoo featured studio work" className="h-full min-h-[220px] w-full object-cover grayscale transition duration-700 hover:scale-105 hover:grayscale-0 sm:min-h-[280px]" />
+                <img src={image} alt="Oracle Tattoo featured studio work" className="h-full min-h-[220px] w-full object-cover transition duration-700 hover:scale-105 sm:min-h-[280px]" />
               </ScrollReveal>
             ))}
           </div>
@@ -242,7 +242,7 @@ export default function Home() {
             <img
               src={demoImages.hygiene}
               alt="Sterile tattoo process and equipment"
-              className="aspect-[4/3] w-full object-cover grayscale transition duration-700 hover:scale-105 hover:grayscale-0"
+              className="aspect-[4/3] w-full object-cover transition duration-700 hover:scale-105"
             />
           </ScrollReveal>
           <ScrollReveal delay={0.08}>

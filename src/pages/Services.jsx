@@ -107,7 +107,7 @@ export default function Services() {
                         variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.64 } } }}
                       >
                         <div className="aspect-[4/3] overflow-hidden border-b border-white/10">
-                          <img src={image} alt={service.name} className="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+                          <img src={image} alt={service.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                         </div>
                         <div className="flex min-h-[240px] flex-col p-5 sm:min-h-[280px] sm:p-7">
                           <Icon size={26} className="text-bone/82" strokeWidth={1.4} />

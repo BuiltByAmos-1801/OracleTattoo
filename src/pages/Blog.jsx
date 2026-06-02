@@ -37,7 +37,7 @@ export default function Blog() {
               variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.64 } } }}
             >
               <div className="aspect-[4/3] overflow-hidden border-b border-white/10">
-                <img src={post.image} alt={post.title} className="h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+                <img src={post.image} alt={post.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
               </div>
               <div className="p-5 sm:p-7">
                 <div className="flex flex-wrap items-center gap-2 text-[0.62rem] font-bold uppercase tracking-[0.18em] text-bone/46 sm:gap-3 sm:text-[0.65rem]">

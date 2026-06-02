@@ -38,7 +38,7 @@ export default function Artists() {
               variants={{ hidden: { opacity: 0, y: 34 }, visible: { opacity: 1, y: 0, transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] } } }}
             >
               {/* Replace with real artist names and photos */}
-              <img src={artist.image} alt={`${artist.name} at Oracle Tattoo`} className="absolute inset-0 h-full w-full object-cover grayscale transition duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:opacity-42" />
+              <img src={artist.image} alt={`${artist.name} at Oracle Tattoo`} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-42" />
               <div className="absolute inset-0 bg-black/45 transition-colors group-hover:bg-black/78" />
               <div className="relative z-10 flex h-full min-h-[420px] flex-col justify-end p-5 sm:min-h-[520px] sm:p-7 md:min-h-[620px]">
                 <p className="text-xs font-bold uppercase tracking-[0.18em] text-bone/56">{artist.experience}</p>
