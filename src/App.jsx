@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx";
@@ -13,6 +14,10 @@ import Blog from "./pages/Blog.jsx";
 
 export default function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [location.pathname]);
 
   return (
     <div className="min-h-screen bg-ink text-bone selection:bg-bone selection:text-ink">
