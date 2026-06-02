@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, PhoneCall, X } from "lucide-react";
 import Logo from "./Logo.jsx";
 
 const navLinks = [
@@ -50,48 +50,36 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
-          isScrolled || isOpen
-            ? "border-b border-white/12 bg-ink/90 py-2 shadow-[0_14px_40px_rgba(0,0,0,0.36)] backdrop-blur-xl"
-            : "border-b border-white/8 bg-ink/68 py-2 backdrop-blur-md"
-        }`}
+        className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-5 sm:pt-4"
       >
-        <nav className="section-shell flex items-center justify-between gap-6">
+        <nav
+          className={`mx-auto flex h-[58px] w-full max-w-[1120px] items-center justify-between gap-3 rounded-[24px] border border-black/10 bg-bone px-4 text-ink shadow-[0_14px_34px_rgba(0,0,0,0.24)] transition-all duration-500 sm:h-[68px] sm:rounded-[30px] sm:px-6 ${
+            isScrolled || isOpen ? "shadow-[0_18px_46px_rgba(0,0,0,0.32)]" : ""
+          }`}
+        >
           <Logo />
-          <div className="hidden items-center gap-8 lg:flex">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                className={({ isActive }) =>
-                  `relative text-[0.72rem] font-semibold uppercase tracking-[0.18em] transition-colors ${
-                    isActive ? "text-bone" : "text-bone/58 hover:text-bone"
-                  }`
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    {link.label}
-                    {isActive && <motion.span layoutId="activeNav" className="absolute -bottom-3 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-bone" />}
-                  </>
-                )}
-              </NavLink>
-            ))}
-          </div>
-          <div className="flex items-center gap-3">
-            <Link
-              to="/booking"
-              className="magnetic-btn hidden border border-white/38 px-5 py-2 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-bone transition-colors sm:inline-flex"
+          <div className="flex items-center gap-2 sm:gap-3">
+            <a
+              href="https://wa.me/917667059851"
+              className="grid h-9 w-9 place-items-center rounded-full bg-[#25D366] text-bone transition-transform hover:scale-105 sm:h-11 sm:w-11"
+              aria-label="Message Oracle Tattoo on WhatsApp"
             >
-              Book Now
-            </Link>
+              <MessageCircle size={19} strokeWidth={2.4} />
+            </a>
+            <a
+              href="tel:+917667059851"
+              className="grid h-9 w-9 place-items-center rounded-full border border-black/18 text-ink transition-colors hover:border-black sm:h-11 sm:w-11"
+              aria-label="Call Oracle Tattoo"
+            >
+              <PhoneCall size={19} strokeWidth={1.9} />
+            </a>
             <button
               type="button"
-              className="grid h-10 w-10 place-items-center border border-white/20 text-bone lg:hidden"
+              className="grid h-9 w-9 place-items-center rounded-full text-ink transition-colors hover:bg-black/5 sm:h-11 sm:w-11"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsOpen((current) => !current)}
             >
-              {isOpen ? <X size={20} /> : <Menu size={20} />}
+              {isOpen ? <X size={24} strokeWidth={2} /> : <Menu size={25} strokeWidth={2} />}
             </button>
           </div>
         </nav>

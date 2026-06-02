@@ -19,7 +19,7 @@ export default function Footer() {
       <div className="section-shell">
         <div className="grid gap-10 sm:gap-12 lg:grid-cols-[1.15fr_1.7fr]">
           <div>
-            <Logo />
+            <Logo invert />
             <p className="mt-6 max-w-md text-sm leading-7 text-bone/62 sm:mt-8 sm:text-base">
               Ranchi's premier tattoo studio for custom tattoos, realism, mandala, tribal, cover-ups, piercings, and considered aftercare.
             </p>
