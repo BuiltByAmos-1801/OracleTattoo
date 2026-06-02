@@ -57,7 +57,7 @@ export default function Navbar() {
         }`}
       >
         <nav className="section-shell flex items-center justify-between gap-6">
-          <Logo className="bg-bone px-3 py-1.5 shadow-[0_8px_26px_rgba(0,0,0,0.35)]" />
+          <Logo />
           <div className="hidden items-center gap-8 lg:flex">
             {navLinks.map((link) => (
               <NavLink
