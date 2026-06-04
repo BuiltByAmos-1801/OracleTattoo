@@ -40,16 +40,6 @@ export default function Services() {
     { label: "Piercing", value: "93%" }
   ];
 
-  const [selectedService, setSelectedService] = useState(null);
-
-  const serviceCategoryImageMap = {
-    "realistic-tattoos": "Portrait",
-    "religious-tattoos": "Religious Tattoos",
-    "couple-tattoo": "Couples Tattoos",
-    "small-tattoo-designs": "Small Tattoos",
-    piercing: "Piercings"
-  };
-
   return (
     <PageTransition>
       <Helmet>
@@ -171,13 +161,14 @@ export default function Services() {
                         <div className="relative flex min-h-[280px] flex-col justify-end p-7 sm:p-8">
                           <span className="text-xs font-bold uppercase tracking-[0.28em] text-bone/50">{service.name}</span>
                           <p className="mt-4 text-sm leading-6 text-bone/80 sm:text-base">{service.description}</p>
-                          <button
-                            type="button"
-                            onClick={() => setSelectedService(service)}
+                          <a
+                            href={service.link || `/booking?service=${encodeURIComponent(service.name)}`}
+                            target={service.link ? "_blank" : undefined}
+                            rel={service.link ? "noreferrer" : undefined}
                             className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
                           >
                             READ MORE <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                          </button>
+                          </a>
                         </div>
                       </motion.article>
                     );
