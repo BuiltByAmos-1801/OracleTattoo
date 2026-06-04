@@ -90,6 +90,7 @@ export const services = [
     category: "PIERCING SERVICES",
     icon: BadgeCheck,
     image: pexelsImage("7400018"),
+    link: "https://oracleinktattoo.com/piercing/",
     description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience."
   },
   {
