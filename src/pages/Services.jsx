@@ -303,6 +303,68 @@ export default function Services() {
           </Link>
         </ScrollReveal>
       </section>
+
+      <AnimatePresence>
+        {selectedService && (
+          <motion.div
+            className="fixed inset-0 z-[70] grid place-items-center bg-ink/96 p-4 backdrop-blur-xl sm:p-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setSelectedService(null)}
+          >
+            <button
+              type="button"
+              className="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-black/60 text-bone transition hover:bg-white/10 sm:right-5 sm:top-5 sm:h-12 sm:w-12"
+              aria-label="Close service detail"
+              onClick={() => setSelectedService(null)}
+            >
+              ×
+            </button>
+            <motion.div
+              className="w-full max-w-5xl overflow-hidden rounded-[2rem] border border-white/20 bg-coal p-6 sm:p-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="grid gap-8 lg:grid-cols-[0.95fr_0.65fr]">
+                <div>
+                  <h2 className="text-4xl font-semibold text-white">{selectedService.name}</h2>
+                  <p className="mt-4 text-base leading-7 text-bone/70">{selectedService.description}</p>
+                  {selectedService.link && (
+                    <a
+                      href={selectedService.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
+                    >
+                      Read more on website <ArrowRight size={16} />
+                    </a>
+                  )}
+                </div>
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/50">More from this category</p>
+                  <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                    {demoImages.gallery
+                      .filter((item) => item.category === serviceCategoryImageMap[selectedService.id])
+                      .slice(0, 4)
+                      .map((item) => (
+                        <div key={item.title} className="overflow-hidden rounded-3xl border border-white/10 bg-black/20">
+                          <img src={item.image} alt={item.title} className="h-40 w-full object-cover" />
+                          <div className="p-3 text-sm text-bone/80">
+                            <p className="font-semibold text-white">{item.title}</p>
+                            <p className="mt-2 text-xs leading-5">{item.category}</p>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </PageTransition>
   );
 }
