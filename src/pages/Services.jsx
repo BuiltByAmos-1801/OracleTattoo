@@ -120,9 +120,9 @@ export default function Services() {
                   <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                   <p className="mt-4 max-w-xl text-sm leading-7 text-bone/80">{item.description}</p>
                 </div>
-                <a href={item.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white">
+                <Link to={`/services/${item.id}`} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white">
                   READ MORE <ArrowRight size={16} />
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -181,14 +181,21 @@ export default function Services() {
                         <div className="relative flex min-h-[280px] flex-col justify-end p-7 sm:p-8">
                           <span className="text-xs font-bold uppercase tracking-[0.28em] text-bone/50">{service.name}</span>
                           <p className="mt-4 text-sm leading-6 text-bone/80 sm:text-base">{service.description}</p>
-                          <a
-                            href={service.link || `/booking?service=${encodeURIComponent(service.name)}`}
-                            target={service.link ? "_blank" : undefined}
-                            rel={service.link ? "noreferrer" : undefined}
-                            className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
-                          >
-                            READ MORE <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                          </a>
+                          {service.id ? (
+                            <Link
+                              to={`/services/${service.id}`}
+                              className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
+                            >
+                              READ MORE <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                            </Link>
+                          ) : (
+                            <a
+                              href={`/booking?service=${encodeURIComponent(service.name)}`}
+                              className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
+                            >
+                              READ MORE <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                            </a>
+                          )}
                         </div>
                       </motion.article>
                     );
