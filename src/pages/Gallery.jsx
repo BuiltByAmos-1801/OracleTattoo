@@ -7,7 +7,7 @@ import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 import { demoImages } from "../data/demoImages.js";
 
-const filters = ["All", "Portrait & Realism", "Tribal & Polynesian", "Mandala", "Religion", "Sleeve", "Lettering", "Cover-Up", "Piercings"];
+const filters = ["All", "Religious Tattoos", "Band Tattoos", "Small Tattoos", "Portrait", "Piercings", "Couples Tattoos"];
 
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -36,11 +36,17 @@ export default function Gallery() {
 
       <section className="section-shell py-10 sm:py-14 md:py-20">
         <ScrollReveal className="mb-8 grid gap-5 border-y border-white/12 py-6 sm:mb-10 sm:gap-6 sm:py-8 md:grid-cols-[1fr_0.7fr] md:items-center">
-          <p className="max-w-3xl text-base leading-7 text-bone/66 sm:text-xl sm:leading-8">
-            These are placeholder references for visual direction. Replace with real Oracle Tattoo portfolio photos once the studio finalizes approved client images.
-          </p>
+          <div>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">About Oracle Tattoo</p>
+            <h2 className="mt-4 max-w-xl text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              Every tattoo tells a story, and every gallery image is part of our studio journey.
+            </h2>
+            <p className="mt-5 max-w-3xl text-base leading-7 text-bone/66 sm:text-xl sm:leading-8">
+              Our artists turn your ideas into meaningful body art with precision, creativity, and care. Explore religious tattoos, band tattoos, small pieces, portraits, couples work, and piercing details from Oracle Tattoo’s portfolio.
+            </p>
+          </div>
           <p className="text-sm leading-6 text-bone/48 md:text-right">
-            Suggested final upload format: vertical close-ups, healed shots, artist-at-work images, and one clean studio interior set.
+            This gallery includes local studio images and approved portfolio work. Use the filters to browse by tattoo style, and click any image for a closer view.
           </p>
         </ScrollReveal>
         <ScrollReveal className="custom-scrollbar -mx-1 flex gap-2 overflow-x-auto px-1 pb-4 sm:gap-3 sm:pb-5">
@@ -100,12 +106,19 @@ export default function Gallery() {
             <motion.img
               src={selected.image}
               alt={selected.title}
-              className="max-h-[80vh] w-auto max-w-full border border-white/12 object-contain sm:max-h-[84vh]"
+              className="max-h-[60vh] w-auto max-w-full border border-white/12 object-contain sm:max-h-[64vh]"
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.96 }}
               onClick={(event) => event.stopPropagation()}
             />
+            <div className="mt-6 w-full max-w-3xl text-left text-bone/80 sm:mt-8">
+              <h3 className="font-serif text-2xl sm:text-3xl">{selected.title}</h3>
+              <p className="mt-3 text-sm leading-7 sm:text-base">{selected.description}</p>
+              <span className="mt-4 inline-block text-[0.58rem] font-bold uppercase tracking-[0.16em] text-bone/50">
+                {selected.category}
+              </span>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

@@ -1,10 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
-import { Instagram } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
-import { artists } from "../data/artists.js";
+import jennyOracleTattoo from "../images/Jenny_OracleTattoo.png.JPG";
+
+const bookingWhatsAppLink = "https://wa.me/917667059851?text=Hi%20Oracle%20Tattoo%2C%20I%20want%20to%20book%20an%20appointment%20with%20Jenny.";
 
 export default function Artists() {
   return (
@@ -23,39 +24,34 @@ export default function Artists() {
         </ScrollReveal>
       </section>
 
-      <section className="page-section">
-        <motion.div
-          className="grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-4"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.16 }}
-          variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
-        >
-          {artists.map((artist) => (
-            <motion.article
-              key={artist.name}
-              className="group relative min-h-[420px] overflow-hidden border border-white/12 bg-coal sm:min-h-[520px] md:min-h-[620px]"
-              variants={{ hidden: { opacity: 0, y: 34 }, visible: { opacity: 1, y: 0, transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] } } }}
+      <section className="page-section pt-8 sm:pt-10 md:pt-12">
+        <ScrollReveal className="mx-auto grid max-w-5xl overflow-hidden border border-white/12 bg-coal md:grid-cols-[0.92fr_1.08fr]">
+          <div className="relative min-h-[380px] overflow-hidden sm:min-h-[520px]">
+            <img
+              src={jennyOracleTattoo}
+              alt="Jenny at Oracle Tattoo"
+              className="absolute inset-0 h-full w-full object-cover object-center opacity-90"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/12 to-transparent md:bg-gradient-to-r md:from-transparent md:to-coal/70" />
+          </div>
+          <div className="flex flex-col justify-center p-6 sm:p-8 md:p-12">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-bone/48">Oracle Tattoo Artist</p>
+            <h2 className="mt-4 font-serif text-5xl leading-none sm:text-6xl md:text-7xl">Jenny</h2>
+            <p className="mt-5 text-lg font-semibold text-bone">Custom Tattoo Artist</p>
+            <p className="mt-6 max-w-xl text-base leading-7 text-bone/64 sm:text-lg sm:leading-8">
+              Jenny creates personal tattoo concepts with clean detailing, thoughtful placement, and a calm studio experience for first-timers and custom pieces.
+            </p>
+            <a
+              href={bookingWhatsAppLink}
+              className="mt-8 inline-flex min-h-14 w-fit items-center justify-center gap-3 rounded-lg bg-[#5438ff] px-7 text-base font-extrabold text-white shadow-[0_18px_42px_rgba(84,56,255,0.28)] transition hover:-translate-y-0.5 hover:bg-[#654cff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              target="_blank"
+              rel="noreferrer"
             >
-              {/* Replace with real artist names and photos */}
-              <img src={artist.image} alt={`${artist.name} at Oracle Tattoo`} className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-42" />
-              <div className="absolute inset-0 bg-black/45 transition-colors group-hover:bg-black/78" />
-              <div className="relative z-10 flex h-full min-h-[420px] flex-col justify-end p-5 sm:min-h-[520px] sm:p-7 md:min-h-[620px]">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-bone/56">{artist.experience}</p>
-                <h2 className="mt-3 font-serif text-4xl leading-none sm:mt-4 sm:text-5xl">{artist.name}</h2>
-                <p className="mt-3 text-sm font-semibold text-bone sm:mt-4 sm:text-base">{artist.specialization}</p>
-                <motion.div className="overflow-hidden" initial={false}>
-                  <div className="mt-4 max-h-none opacity-100 sm:max-h-0 sm:opacity-0 sm:transition-all sm:duration-500 group-hover:sm:mt-8 group-hover:sm:max-h-56 group-hover:sm:opacity-100">
-                    <p className="text-sm leading-6 text-bone/64">{artist.detail}</p>
-                    <a href="https://instagram.com/" className="mt-4 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-bone sm:mt-6">
-                      <Instagram size={16} /> {artist.handle}
-                    </a>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.article>
-          ))}
-        </motion.div>
+              <MessageCircle size={19} strokeWidth={2.4} />
+              Book With Jenny
+            </a>
+          </div>
+        </ScrollReveal>
       </section>
     </PageTransition>
   );

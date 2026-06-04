@@ -22,7 +22,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Brush,
     image: pexelsImage("7147771"),
-    description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive, with depth, expression, and beauty in every design."
+    description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style."
   },
   {
     id: "religious-tattoos",
@@ -38,7 +38,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Heart,
     image: pexelsImage("13771118"),
-    description: "A meaningful and permanent symbol of love, trust, shared memories, and the unique bond between two people."
+    description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship."
   },
   {
     id: "small-tattoo-designs",
@@ -46,7 +46,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Feather,
     image: pexelsImage("8258889"),
-    description: "Subtle, stylish, and meaningful tiny designs for wrists, fingers, ankles, and collarbones, including symbols, words, and minimal patterns."
+    description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality."
   },
   {
     id: "custom-lettering",
@@ -86,7 +86,7 @@ export const services = [
     category: "PIERCING SERVICES",
     icon: BadgeCheck,
     image: pexelsImage("7400018"),
-    description: "Stylish and safe ear, nose, eyebrow, lip, and cartilage piercings with professional care, hygienic setup, and high-quality jewelry."
+    description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience."
   },
   {
     id: "nose-piercing",

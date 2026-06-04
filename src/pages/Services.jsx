@@ -51,13 +51,62 @@ export default function Services() {
 
       <section className="page-hero">
         <ScrollReveal>
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Home / Services</p>
           <p className="page-hero-eyebrow">Services</p>
-          <h1 className="page-hero-title">Our Services</h1>
+          <h1 className="page-hero-title">Our Service</h1>
           <p className="page-hero-lead">
             Explore realistic tattoos, religious designs, couple tattoos, small tattoo designs, and safe professional piercing services at Oracle Tattoo, Ranchi.
           </p>
           <motion.div className="mt-5 h-px max-w-2xl bg-bone sm:mt-7" initial={{ scaleX: 0, transformOrigin: "left" }} animate={{ scaleX: 1 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} />
         </ScrollReveal>
+      </section>
+
+      <section className="page-section border-b border-white/10 pb-10 sm:pb-14 md:pb-16">
+        <ScrollReveal className="mb-10 max-w-3xl">
+          <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">What We Do</p>
+          <h2 className="mt-4 text-4xl font-semibold tracking-tight text-white">We create meaningful tattoos and safe piercings you can wear with confidence.</h2>
+          <p className="mt-5 text-base leading-7 text-bone/66 sm:text-lg">
+            From realistic portrait work to shared couple designs, subtle small tattoos, spiritual ink, and hygienic body piercings, Oracle Tattoo delivers trusted body art services with care and precision.
+          </p>
+        </ScrollReveal>
+
+        <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+          {[
+            {
+              title: "Realistic Tattoos",
+              description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style.",
+              link: "https://oracleinktattoo.com/reliable-tattoos/"
+            },
+            {
+              title: "Religious Tattoos",
+              description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning.",
+              link: "https://oracleinktattoo.com/religious-tattoo/"
+            },
+            {
+              title: "Couple Tattoo",
+              description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship.",
+              link: "https://oracleinktattoo.com/couple-tattoo/"
+            },
+            {
+              title: "Small Tattoo Designs",
+              description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality.",
+              link: "https://oracleinktattoo.com/small-tattoo-design/"
+            },
+            {
+              title: "Piercing",
+              description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience.",
+              link: "https://oracleinktattoo.com/piercing/"
+            }
+          ].map((item) => (
+            <article key={item.title} className="group overflow-hidden rounded-3xl border border-white/12 bg-coal p-6 transition hover:border-white/40 sm:p-7">
+              <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+              <p className="mt-4 text-sm leading-7 text-bone/70">{item.description}</p>
+              <a href={item.link} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone hover:text-white">
+                READ MORE <ArrowRight size={16} />
+              </a>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="page-section">
@@ -133,7 +182,13 @@ export default function Services() {
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Why Choose Us</p>
             <h2 className="section-display mt-4">Always provide satisfactory work.</h2>
             <p className="mt-6 max-w-xl text-sm leading-7 text-bone/62 sm:text-base">
-              At Oracle Tattoo, customer satisfaction is our priority. Whether you want a small minimalist tattoo or a large custom design, our artists help you create something truly unique.
+              At Oracle Tattoo, we believe every tattoo tells a story. Our skilled artists are passionate about turning your ideas into stunning body art with precision, creativity, and attention to detail.
+            </p>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-bone/62 sm:text-base">
+              We follow strict hygiene standards and use high-quality equipment to ensure a safe and comfortable tattoo experience. Whether you want a small minimalist tattoo or a large custom design, our artists work closely with you to create something truly unique.
+            </p>
+            <p className="mt-5 max-w-xl text-sm leading-7 text-bone/62 sm:text-base">
+              At Oracle Tattoo, customer satisfaction is our priority. From consultation to aftercare guidance, we make sure every client leaves with a tattoo they are proud to wear for life.
             </p>
             <div className="mt-8 grid gap-4 border-y border-white/12 py-6 sm:mt-10 sm:grid-cols-3">
               <div>
@@ -160,6 +215,69 @@ export default function Services() {
                 </ScrollReveal>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="page-section border-t border-white/10 py-12 sm:py-16 md:py-20">
+        <div className="section-shell grid gap-8 lg:grid-cols-[0.95fr_1.05fr] xl:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-6 rounded-3xl border border-white/12 bg-coal p-6 sm:p-8">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Quick Links</p>
+              <ul className="mt-5 space-y-3 text-sm text-bone/70">
+                {[
+                  { label: "About Us", href: "https://oracleinktattoo.com/about-us/" },
+                  { label: "Services", href: "https://oracleinktattoo.com/services/" },
+                  { label: "Portfolio", href: "https://oracleinktattoo.com/portfolio/" },
+                  { label: "Gallery", href: "https://oracleinktattoo.com/gallery/" },
+                  { label: "Contact Us", href: "https://oracleinktattoo.com/contact-us/" }
+                ].map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} target="_blank" rel="noreferrer" className="transition hover:text-white">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Services</p>
+              <ul className="mt-5 space-y-3 text-sm text-bone/70">
+                {[
+                  { label: "Realistic Tattoo", href: "https://oracleinktattoo.com/realistic-tattoo/" },
+                  { label: "Piercing", href: "https://oracleinktattoo.com/piercing/" },
+                  { label: "Couple Tattoo", href: "https://oracleinktattoo.com/couple-tattoo/" }
+                ].map((link) => (
+                  <li key={link.label}>
+                    <a href={link.href} target="_blank" rel="noreferrer" className="transition hover:text-white">
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/12 bg-coal p-6 sm:p-8">
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Contact detail</p>
+            <div className="mt-5 space-y-4 text-sm leading-6 text-bone/70">
+              <p>First floor NH-75, Ratu Rd, beside Devi Mandap Tilta, Opp. Sharda Automobiles TVS</p>
+              <p>
+                <a href="tel:+917667059851" className="transition hover:text-white">+917667059851</a>
+              </p>
+              <p>
+                <a href="mailto:oracletattoo23@gmail.com" className="transition hover:text-white">oracletattoo23@gmail.com</a>
+              </p>
+              <div className="flex flex-wrap gap-3 text-sm">
+                <a href="https://www.instagram.com/oracletattooindia?igsh=MWZ2NzZyY2U1ejZ1MA%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="transition hover:text-white">
+                  Instagram
+                </a>
+                <a href="https://www.instagram.com/oracletattooindia?igsh=MWZ2NzZyY2U1ejZ1MA%3D%3D&utm_source=qr" target="_blank" rel="noreferrer" className="transition hover:text-white">
+                  Facebook
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

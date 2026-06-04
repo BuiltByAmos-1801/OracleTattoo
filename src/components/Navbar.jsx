@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, MessageCircle, PhoneCall, X } from "lucide-react";
 import Logo from "./Logo.jsx";
@@ -30,6 +30,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const isHomeTop = location.pathname === "/" && !isScrolled && !isOpen;
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
@@ -50,38 +51,64 @@ export default function Navbar() {
   return (
     <>
       <header
-        className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-5 sm:pt-4"
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-500 ${
+          isHomeTop ? "px-5 pt-6 sm:px-8 sm:pt-8" : "px-3 pt-3 sm:px-5 sm:pt-4"
+        }`}
       >
         <nav
-          className={`mx-auto flex h-[58px] w-full max-w-[1120px] items-center justify-between gap-3 rounded-[24px] border border-black/10 bg-bone px-4 text-ink shadow-[0_14px_34px_rgba(0,0,0,0.24)] transition-all duration-500 sm:h-[68px] sm:rounded-[30px] sm:px-6 ${
-            isScrolled || isOpen ? "shadow-[0_18px_46px_rgba(0,0,0,0.32)]" : ""
+          className={`mx-auto flex w-full items-center justify-between gap-3 transition-all duration-500 ${
+            isHomeTop
+              ? "h-12 max-w-[1480px] text-bone"
+              : "h-[66px] max-w-[1120px] rounded-[28px] border border-black/10 bg-bone px-5 text-ink shadow-[0_14px_34px_rgba(0,0,0,0.24)] sm:h-[78px] sm:rounded-[34px] sm:px-7"
+          } ${
+            !isHomeTop && (isScrolled || isOpen) ? "shadow-[0_18px_46px_rgba(0,0,0,0.32)]" : ""
           }`}
         >
-          <Logo />
-          <div className="flex items-center gap-2 sm:gap-3">
-            <a
-              href="https://wa.me/917667059851"
-              className="grid h-9 w-9 place-items-center rounded-full bg-[#25D366] text-bone transition-transform hover:scale-105 sm:h-11 sm:w-11"
-              aria-label="Message Oracle Tattoo on WhatsApp"
-            >
-              <MessageCircle size={19} strokeWidth={2.4} />
-            </a>
-            <a
-              href="tel:+917667059851"
-              className="grid h-9 w-9 place-items-center rounded-full border border-black/18 text-ink transition-colors hover:border-black sm:h-11 sm:w-11"
-              aria-label="Call Oracle Tattoo"
-            >
-              <PhoneCall size={19} strokeWidth={1.9} />
-            </a>
+          <div className={`flex items-center gap-2 sm:gap-3 ${isHomeTop ? "order-1" : "order-2"}`}>
+            {!isHomeTop && (
+              <>
+                <a
+                  href="https://wa.me/917667059851"
+                  className="grid h-9 w-9 place-items-center rounded-full bg-[#25D366] text-bone transition-transform hover:scale-105 sm:h-11 sm:w-11"
+                  aria-label="Message Oracle Tattoo on WhatsApp"
+                >
+                  <MessageCircle size={19} strokeWidth={2.4} />
+                </a>
+                <a
+                  href="tel:+917667059851"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-black/18 text-ink transition-colors hover:border-black sm:h-11 sm:w-11"
+                  aria-label="Call Oracle Tattoo"
+                >
+                  <PhoneCall size={19} strokeWidth={1.9} />
+                </a>
+              </>
+            )}
             <button
               type="button"
-              className="grid h-9 w-9 place-items-center rounded-full text-ink transition-colors hover:bg-black/5 sm:h-11 sm:w-11"
+              className={`grid place-items-center transition-colors ${
+                isHomeTop
+                  ? "h-12 w-12 text-bone hover:bg-white/10"
+                  : "h-9 w-9 rounded-full text-ink hover:bg-black/5 sm:h-11 sm:w-11"
+              }`}
               aria-label={isOpen ? "Close menu" : "Open menu"}
               onClick={() => setIsOpen((current) => !current)}
             >
               {isOpen ? <X size={24} strokeWidth={2} /> : <Menu size={25} strokeWidth={2} />}
             </button>
           </div>
+          {isHomeTop ? (
+            <Link
+              to="/"
+              className="order-2 text-2xl font-extrabold text-bone sm:text-4xl"
+              aria-label="Oracle Tattoo home"
+            >
+              OracleTattoo
+            </Link>
+          ) : (
+            <div className="order-1">
+              <Logo />
+            </div>
+          )}
         </nav>
       </header>
 
@@ -96,13 +123,13 @@ export default function Navbar() {
           >
             <div className="noise-overlay" />
             <motion.div className="section-shell relative flex min-h-[calc(100vh-8rem)] flex-col justify-between pb-10">
-              <div className="space-y-3">
+              <div className="space-y-1 sm:space-y-2">
                 {navLinks.map((link) => (
                   <motion.div variants={linkVariants} key={link.to}>
                     <NavLink
                       to={link.to}
                       className={({ isActive }) =>
-                        `block font-serif text-[clamp(2.7rem,13vw,7.8rem)] leading-[0.92] ${
+                        `block font-serif text-[clamp(2.1rem,7.5vw,5.1rem)] leading-[0.96] ${
                           isActive ? "text-bone" : "text-bone/56"
                         }`
                       }
