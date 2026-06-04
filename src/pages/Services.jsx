@@ -206,6 +206,14 @@ export default function Services() {
                               READ MORE <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
                             </a>
                           )}
+                          <a
+                            href={`https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${service.name}.`)}`}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
+                          >
+                            BOOK
+                          </a>
                         </div>
                       </motion.article>
                     );
