@@ -40,6 +40,16 @@ export default function Services() {
     { label: "Piercing", value: "93%" }
   ];
 
+  const [selectedService, setSelectedService] = useState(null);
+
+  const serviceCategoryImageMap = {
+    "realistic-tattoos": "Portrait",
+    "religious-tattoos": "Religious Tattoos",
+    "couple-tattoo": "Couples Tattoos",
+    "small-tattoo-designs": "Small Tattoos",
+    piercing: "Piercings"
+  };
+
   return (
     <PageTransition>
       <Helmet>
