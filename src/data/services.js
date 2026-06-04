@@ -22,6 +22,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Brush,
     image: pexelsImage("7147771"),
+    link: "https://oracleinktattoo.com/reliable-tattoos/",
     description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style."
   },
   {
@@ -30,6 +31,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Sparkles,
     image: pexelsImage("11178572"),
+    link: "https://oracleinktattoo.com/religious-tattoo/",
     description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning."
   },
   {
@@ -38,6 +40,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Heart,
     image: pexelsImage("13771118"),
+    link: "https://oracleinktattoo.com/couple-tattoo/",
     description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship."
   },
   {
@@ -46,6 +49,7 @@ export const services = [
     category: "TATTOO SERVICES",
     icon: Feather,
     image: pexelsImage("8258889"),
+    link: "https://oracleinktattoo.com/small-tattoo-design/",
     description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality."
   },
   {
