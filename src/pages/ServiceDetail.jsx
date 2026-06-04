@@ -91,20 +91,7 @@ export default function ServiceDetail() {
               <h3 className="text-2xl font-semibold text-white">Book Your {service.name}</h3>
               <p className="mt-4 text-sm leading-6 text-bone/70">Ready to bring this tattoo or piercing concept to life? Book a consultation to discuss your design, size, and placement with our artists.</p>
               <a
-                href={(() => {
-                  try {
-                    const img = image || "";
-                    const imgUrl = typeof window !== "undefined" && img
-                      ? img.startsWith("http")
-                        ? img
-                        : `${window.location.origin}${img}`
-                      : img;
-                    const msg = `Hi Oracle Tattoo, I want to book an appointment for ${service.name}. Image: ${imgUrl}`;
-                    return `https://wa.me/917667059851?text=${encodeURIComponent(msg)}`;
-                  } catch (e) {
-                    return `https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${service.name}.`)}`;
-                  }
-                })()}
+                href={`https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${service.name}.`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-bone transition hover:border-white/30 hover:bg-white/10"
