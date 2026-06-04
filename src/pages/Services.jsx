@@ -7,7 +7,7 @@ import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 import realisticImg from "../images/tattooproject21.webp";
 import religiousImg from "../images/tattooproject17.webp";
-import coupleImg from "../images/tattooproject3.webp";
+import coupleImg from "../images/tattooproject18.webp";
 import smallImg from "../images/tattooproject14.webp";
 import piercingImg from "../images/tattooproject16.webp";
 import { demoImages } from "../data/demoImages.js";
