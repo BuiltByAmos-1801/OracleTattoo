@@ -78,33 +78,33 @@ export default function Services() {
         <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {[
             {
+              id: "realistic-tattoos",
               title: "Realistic Tattoos",
               description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style.",
-              link: "https://oracleinktattoo.com/reliable-tattoos/",
               image: realisticImg
             },
             {
+              id: "religious-tattoos",
               title: "Religious Tattoos",
               description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning.",
-              link: "https://oracleinktattoo.com/religious-tattoo/",
               image: religiousImg
             },
             {
+              id: "couple-tattoo",
               title: "Couple Tattoo",
               description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship.",
-              link: "https://oracleinktattoo.com/couple-tattoo/",
               image: coupleImg
             },
             {
+              id: "small-tattoo-designs",
               title: "Small Tattoo Designs",
               description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality.",
-              link: "https://oracleinktattoo.com/small-tattoo-design/",
               image: smallImg
             },
             {
+              id: "piercing",
               title: "Piercing",
               description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience.",
-              link: "https://oracleinktattoo.com/piercing/",
               image: piercingImg
             }
           ].map((item) => (
