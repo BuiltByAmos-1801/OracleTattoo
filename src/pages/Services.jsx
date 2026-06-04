@@ -120,9 +120,19 @@ export default function Services() {
                   <h3 className="text-xl font-semibold text-white">{item.title}</h3>
                   <p className="mt-4 max-w-xl text-sm leading-7 text-bone/80">{item.description}</p>
                 </div>
-                <Link to={`/services/${item.id}`} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white">
-                  READ MORE <ArrowRight size={16} />
-                </Link>
+                <div className="flex items-center gap-3">
+                  <Link to={`/services/${item.id}`} className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white">
+                    READ MORE <ArrowRight size={16} />
+                  </Link>
+                  <a
+                    href={`https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${item.title}.`)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
+                  >
+                    BOOK
+                  </a>
+                </div>
               </div>
             </article>
           ))}
