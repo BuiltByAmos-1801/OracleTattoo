@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { ArrowRight, BadgeCheck, ShieldCheck, Sparkles } from "lucide-react";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
