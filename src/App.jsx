@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Services from "./pages/Services.jsx";
+import ServiceDetail from "./pages/ServiceDetail.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import Artists from "./pages/Artists.jsx";
 import Booking from "./pages/Booking.jsx";
