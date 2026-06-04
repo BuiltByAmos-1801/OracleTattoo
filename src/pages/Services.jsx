@@ -125,7 +125,18 @@ export default function Services() {
                     READ MORE <ArrowRight size={16} />
                   </Link>
                   <a
-                    href={`https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${item.title}.`)}`}
+                    href={(() => {
+                      try {
+                        const img = item.image || "";
+                        const imgUrl = typeof window !== 'undefined' && img
+                          ? (img.startsWith('http') ? img : `${window.location.origin}${img}`)
+                          : img;
+                        const msg = `Hi Oracle Tattoo, I want to book an appointment for ${item.title}. Image: ${imgUrl}`;
+                        return `https://wa.me/917667059851?text=${encodeURIComponent(msg)}`;
+                      } catch (e) {
+                        return `https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${item.title}.`)}`;
+                      }
+                    })()}
                     target="_blank"
                     rel="noreferrer"
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
@@ -207,7 +218,18 @@ export default function Services() {
                             </a>
                           )}
                           <a
-                            href={`https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${service.name}.`)}`}
+                            href={(() => {
+                              try {
+                                const img = image || "";
+                                const imgUrl = typeof window !== 'undefined' && img
+                                  ? (img.startsWith('http') ? img : `${window.location.origin}${img}`)
+                                  : img;
+                                const msg = `Hi Oracle Tattoo, I want to book an appointment for ${service.name}. Image: ${imgUrl}`;
+                                return `https://wa.me/917667059851?text=${encodeURIComponent(msg)}`;
+                              } catch (e) {
+                                return `https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${service.name}.`)}`;
+                              }
+                            })()}
                             target="_blank"
                             rel="noreferrer"
                             className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
