@@ -80,35 +80,49 @@ export default function Services() {
             {
               title: "Realistic Tattoos",
               description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style.",
-              link: "https://oracleinktattoo.com/reliable-tattoos/"
+              link: "https://oracleinktattoo.com/reliable-tattoos/",
+              image: realisticImg
             },
             {
               title: "Religious Tattoos",
               description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning.",
-              link: "https://oracleinktattoo.com/religious-tattoo/"
+              link: "https://oracleinktattoo.com/religious-tattoo/",
+              image: religiousImg
             },
             {
               title: "Couple Tattoo",
               description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship.",
-              link: "https://oracleinktattoo.com/couple-tattoo/"
+              link: "https://oracleinktattoo.com/couple-tattoo/",
+              image: coupleImg
             },
             {
               title: "Small Tattoo Designs",
               description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality.",
-              link: "https://oracleinktattoo.com/small-tattoo-design/"
+              link: "https://oracleinktattoo.com/small-tattoo-design/",
+              image: smallImg
             },
             {
               title: "Piercing",
               description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience.",
-              link: "https://oracleinktattoo.com/piercing/"
+              link: "https://oracleinktattoo.com/piercing/",
+              image: piercingImg
             }
           ].map((item) => (
-            <article key={item.title} className="group overflow-hidden rounded-3xl border border-white/12 bg-coal p-6 transition hover:border-white/40 sm:p-7">
-              <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-4 text-sm leading-7 text-bone/70">{item.description}</p>
-              <a href={item.link} target="_blank" rel="noreferrer" className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone hover:text-white">
-                READ MORE <ArrowRight size={16} />
-              </a>
+            <article
+              key={item.title}
+              className="group relative overflow-hidden rounded-3xl border border-white/12 transition hover:border-white/40"
+              style={{ backgroundImage: `url(${item.image})`, backgroundSize: "cover", backgroundPosition: "center" }}
+            >
+              <div className="absolute inset-0 bg-black/65 transition duration-300 group-hover:bg-black/55" />
+              <div className="relative flex min-h-[280px] flex-col justify-between gap-6 p-7 sm:p-9">
+                <div>
+                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-4 max-w-xl text-sm leading-7 text-bone/80">{item.description}</p>
+                </div>
+                <a href={item.link} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white">
+                  READ MORE <ArrowRight size={16} />
+                </a>
+              </div>
             </article>
           ))}
         </div>
