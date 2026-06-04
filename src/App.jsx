@@ -27,6 +27,7 @@ export default function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/:serviceId" element={<ServiceDetail />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/booking" element={<Booking />} />
