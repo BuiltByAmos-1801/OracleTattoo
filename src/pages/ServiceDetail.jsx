@@ -90,9 +90,14 @@ export default function ServiceDetail() {
             <div className="p-8">
               <h3 className="text-2xl font-semibold text-white">Book Your {service.name}</h3>
               <p className="mt-4 text-sm leading-6 text-bone/70">Ready to bring this tattoo or piercing concept to life? Book a consultation to discuss your design, size, and placement with our artists.</p>
-              <Link to="/booking" className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-bone transition hover:border-white/30 hover:bg-white/10">
+              <a
+                href={`https://wa.me/917667059851?text=${encodeURIComponent(`Hi Oracle Tattoo, I want to book an appointment for ${service.name}.`)}`}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-bone transition hover:border-white/30 hover:bg-white/10"
+              >
                 Book Now <ArrowRight size={16} />
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
