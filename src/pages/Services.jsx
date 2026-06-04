@@ -157,24 +157,27 @@ export default function Services() {
                   variants={{ visible: { transition: { staggerChildren: 0.045 } } }}
                 >
                   {categoryServices.map((service, index) => {
-                    const Icon = service.icon;
                     const image = service.image || demoImages.services[index % demoImages.services.length];
                     return (
                       <motion.article
                         key={service.id}
-                        className="group overflow-hidden border border-white/12 bg-coal transition-colors hover:border-white/42"
+                        className="group relative overflow-hidden rounded-[2rem] border border-white/12 bg-coal transition hover:border-white/42"
                         variants={{ hidden: { opacity: 0, y: 28 }, visible: { opacity: 1, y: 0, transition: { duration: 0.64 } } }}
                       >
-                        <div className="aspect-[4/3] overflow-hidden border-b border-white/10">
+                        <div className="absolute inset-0 overflow-hidden">
                           <img src={image} alt={service.name} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                         </div>
-                        <div className="flex min-h-[240px] flex-col p-5 sm:min-h-[280px] sm:p-7">
-                          <Icon size={26} className="text-bone/82" strokeWidth={1.4} />
-                          <h3 className="mt-6 font-serif text-2xl leading-tight sm:mt-8 sm:text-3xl">{service.name}</h3>
-                          <p className="mt-4 flex-1 text-sm leading-6 text-bone/58 sm:mt-5">{service.description}</p>
-                          <Link to={`/booking?service=${encodeURIComponent(service.name)}`} className="mt-6 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-bone sm:mt-8">
-                            Read More <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-                          </Link>
+                        <div className="relative flex min-h-[280px] flex-col justify-end p-7 sm:p-8">
+                          <span className="text-xs font-bold uppercase tracking-[0.28em] text-bone/50">{service.name}</span>
+                          <p className="mt-4 text-sm leading-6 text-bone/80 sm:text-base">{service.description}</p>
+                          <button
+                            type="button"
+                            onClick={() => setSelectedService(service)}
+                            className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-bone transition hover:text-white"
+                          >
+                            READ MORE <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+                          </button>
                         </div>
                       </motion.article>
                     );
