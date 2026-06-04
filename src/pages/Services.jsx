@@ -110,10 +110,11 @@ export default function Services() {
           ].map((item) => (
             <article
               key={item.title}
-              className="group relative overflow-hidden rounded-3xl border border-white/12 transition hover:border-white/40"
-              style={{ backgroundImage: `url(${item.image})`, backgroundSize: "cover", backgroundPosition: "center" }}
-            >
-              <div className="absolute inset-0 bg-black/65 transition duration-300 group-hover:bg-black/55" />
+              className="group relative overflow-hidden rounded-3xl border border-white/12 transition hover:border-white/40">
+              <div className="absolute inset-0 overflow-hidden">
+                <img src={item.image} alt={item.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-black/65 transition duration-300 group-hover:bg-black/55" />
+              </div>
               <div className="relative flex min-h-[280px] flex-col justify-between gap-6 p-7 sm:p-9">
                 <div>
                   <h3 className="text-xl font-semibold text-white">{item.title}</h3>
