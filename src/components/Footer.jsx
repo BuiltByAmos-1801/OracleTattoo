@@ -5,7 +5,6 @@ import logoSrc from "../images/Oracle_Tattoo_Logo.PNG";
 
 const footerLinks = [
   { label: "Home", to: "/" },
-  { label: "About", to: "/about" },
   { label: "Services", to: "/services" },
   { label: "Gallery", to: "/gallery" },
   { label: "Artists", to: "/artists" },
