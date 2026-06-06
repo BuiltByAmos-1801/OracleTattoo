@@ -1,3 +1,8 @@
+import tattooProject3 from "../images/tattooproject3.webp";
+import tattooProject14 from "../images/tattooproject14.webp";
+import tattooProject15 from "../images/tattooproject15.webp";
+import tattooProject16 from "../images/tattooproject16.webp";
+
 const unsplash = (id, width = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=88`;
 
@@ -10,10 +15,10 @@ export const demoImages = {
   consultation: pexels("28919353", 1200),
   hygiene: pexels("20339302", 1200),
   featured: [
-    pexels("13345926", 1000),
-    pexels("11364054", 1000),
-    pexels("28919353", 1000),
-    pexels("20339302", 1000)
+    tattooProject3,
+    tattooProject14,
+    tattooProject15,
+    tattooProject16
   ],
   services: [
     pexels("28496766", 900),
