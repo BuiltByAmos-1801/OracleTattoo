@@ -228,9 +228,17 @@ export default function Home() {
             <h2 className="serif-display text-[clamp(2rem,6.5vw,7.6rem)] leading-[0.94] sm:leading-[0.92]">
               Best Tattoo Studio in Ranchi
             </h2>
-            <p className="mt-6 max-w-3xl text-base leading-7 text-bone/64 sm:mt-8 sm:text-lg sm:leading-8">
-              Oracle Tattoo is built for people searching for a trusted tattoo studio in Ranchi, from first-tattoo guidance to custom tattoos, religious tattoos, cover-ups, and large-scale pieces. Every session is shaped around clean design, considered placement, and disciplined studio hygiene.
-            </p>
+            <div className="mt-6 grid max-w-3xl gap-4 text-base leading-7 text-bone/64 sm:mt-8 sm:text-lg sm:leading-8">
+              <p>
+                At Oracle Tattoo, we believe every tattoo tells a story. Our skilled artists are passionate about turning your ideas into stunning body art with precision, creativity, and attention to detail.
+              </p>
+              <p>
+                We follow strict hygiene standards and use high-quality equipment to ensure a safe and comfortable tattoo experience. Whether you want a small minimalist tattoo or a large custom design, our artists work closely with you to create something truly unique.
+              </p>
+              <p>
+                At Oracle Tattoo, customer satisfaction is our priority. From consultation to aftercare guidance, we make sure every client leaves with a tattoo they are proud to wear for life.
+              </p>
+            </div>
           </ScrollReveal>
         </div>
       </section>
