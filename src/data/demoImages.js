@@ -84,7 +84,7 @@ export const demoImages = {
     unsplash("photo-1562962230-16e4623d36e6", 900),
     unsplash("photo-1542727365-19732a80dcfd", 900)
   ],
-  blogHero: featured02,
+  blogHero: featured06,
   blog: [
     featured02,
     featured01,
