@@ -37,7 +37,7 @@ export const demoImages = {
   hero: pexels("11364054", 1800),
   studio: pexels("13345926", 1400),
   consultation: pexels("28919353", 1200),
-  hygiene: pexels("20339302", 1200),
+  hygiene: featured02,
   featured: [
     featured01,
     featured02,
