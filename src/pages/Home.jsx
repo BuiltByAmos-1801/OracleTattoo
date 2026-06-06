@@ -308,7 +308,7 @@ export default function Home() {
               <ScrollReveal
                 key={image}
                 delay={index * 0.05}
-                className={`overflow-hidden border border-white/10 bg-ink ${index === 0 ? "md:col-span-2 md:row-span-2" : ""} ${index === 3 || index === 4 || index === 7 ? "md:col-span-2" : ""}`}
+                className={`overflow-hidden border border-white/10 bg-ink ${index === 0 ? "md:col-span-2 md:row-span-2" : ""} ${index === 3 || index === 4 || index === 6 ? "md:col-span-2" : ""}`}
               >
                 <img src={image} alt="Oracle Tattoo featured studio work" className="h-full min-h-[220px] w-full object-cover transition duration-700 hover:scale-105 sm:min-h-[280px]" />
               </ScrollReveal>
