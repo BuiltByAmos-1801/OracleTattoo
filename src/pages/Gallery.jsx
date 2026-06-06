@@ -10,7 +10,7 @@ import { demoImages } from "../data/demoImages.js";
 const filters = ["All", "Religious Tattoos", "Band Tattoos", "Small Tattoos", "Portrait", "Piercings", "Couples Tattoos"];
 
 const galleryStats = [
-  { value: "20", label: "Portfolio frames" },
+  { value: "21", label: "Portfolio frames" },
   { value: "6", label: "Specialty styles" },
   { value: "Ranchi", label: "Custom studio" }
 ];
