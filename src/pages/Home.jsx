@@ -145,7 +145,7 @@ export default function Home() {
             <div className="mt-8 flex flex-col items-start gap-4 sm:mt-10 md:hidden">
               <a
                 href={bookingWhatsAppLink}
-                className="inline-flex min-h-16 w-fit items-center justify-center rounded-lg bg-[#5438ff] px-8 text-lg font-extrabold text-white shadow-[0_18px_42px_rgba(84,56,255,0.32)] transition hover:-translate-y-0.5 hover:bg-[#654cff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-10"
+                className="inline-flex min-h-16 w-fit items-center justify-center rounded-lg border border-white/18 bg-bone px-8 text-lg font-extrabold text-ink shadow-[0_18px_42px_rgba(255,255,255,0.14)] transition hover:-translate-y-0.5 hover:bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bone sm:px-10"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -157,7 +157,7 @@ export default function Home() {
         <div className="section-shell pointer-events-none absolute inset-x-0 top-[58%] z-20 hidden -translate-y-1/2 justify-end md:flex">
           <a
             href={bookingWhatsAppLink}
-            className="pointer-events-auto inline-flex min-h-16 w-fit items-center justify-center rounded-lg bg-[#5438ff] px-10 text-lg font-extrabold text-white shadow-[0_18px_42px_rgba(84,56,255,0.32)] transition hover:-translate-y-0.5 hover:bg-[#654cff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            className="pointer-events-auto inline-flex min-h-16 w-fit items-center justify-center rounded-lg border border-white/18 bg-bone px-10 text-lg font-extrabold text-ink shadow-[0_18px_42px_rgba(255,255,255,0.14)] transition hover:-translate-y-0.5 hover:bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bone"
             target="_blank"
             rel="noreferrer"
           >
