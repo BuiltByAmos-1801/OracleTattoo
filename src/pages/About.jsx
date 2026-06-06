@@ -8,6 +8,8 @@ import ScrollReveal from "../components/ScrollReveal.jsx";
 import studioImage from "../images/alibaba-tattoos-studio-2-1024x685.webp";
 import jennyImage from "../images/jenny.JPG";
 
+const aboutHeroImage = "https://images.pexels.com/photos/35426258/pexels-photo-35426258.jpeg?auto=compress&cs=tinysrgb&w=1800";
+
 const stats = [
   { value: "1,250+", label: "Satisfied Customers" },
   { value: "15th", label: "Years of Experience" },
@@ -50,8 +52,8 @@ export default function About() {
       </Helmet>
 
       <ImageHero
-        image={studioImage}
-        alt="Oracle Tattoo studio in Ranchi"
+        image={aboutHeroImage}
+        alt="Tattoo artist working in a professional studio"
         kicker="Home / About Us"
         eyebrow="About Oracle Tattoo"
         title="Professional tattoo work with a personal story."
