@@ -98,7 +98,7 @@ export default function Navbar() {
             </button>
           </div>
           {isHomeTop ? (
-            <Logo className="order-2" imageClassName="h-12 sm:h-14" invert />
+            <Logo className="order-2" imageClassName="h-16 sm:h-20" invert />
           ) : (
             <div className="order-1">
               <Logo />
