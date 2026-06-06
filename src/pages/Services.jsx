@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight, BadgeCheck, ShieldCheck, Sparkles } from "lucide-react";
+import ImageHero from "../components/ImageHero.jsx";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 import realisticImg from "../images/tattooproject21.webp";
@@ -54,17 +55,16 @@ export default function Services() {
         <link rel="canonical" href="https://www.oracletattoo.in/services" />
       </Helmet>
 
-      <section className="page-hero">
-        <ScrollReveal>
-          <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Home / Services</p>
-          <p className="page-hero-eyebrow">Services</p>
-          <h1 className="page-hero-title">Our Service</h1>
-          <p className="page-hero-lead">
-            Explore realistic tattoos, religious designs, couple tattoos, small tattoo designs, and safe professional piercing services at Oracle Tattoo, Ranchi.
-          </p>
-          <motion.div className="mt-5 h-px max-w-2xl bg-bone sm:mt-7" initial={{ scaleX: 0, transformOrigin: "left" }} animate={{ scaleX: 1 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} />
-        </ScrollReveal>
-      </section>
+      <ImageHero
+        image={demoImages.consultation}
+        alt="Tattoo artist creating an intricate studio design"
+        kicker="Home / Services"
+        eyebrow="Services"
+        title="Our Service"
+        lead="Explore realistic tattoos, religious designs, couple tattoos, small tattoo designs, and safe professional piercing services at Oracle Tattoo, Ranchi."
+      >
+        <motion.div className="mt-5 h-px max-w-2xl bg-bone sm:mt-7" initial={{ scaleX: 0, transformOrigin: "left" }} animate={{ scaleX: 1 }} transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }} />
+      </ImageHero>
 
       <section className="page-section border-b border-white/10 pb-10 sm:pb-14 md:pb-16">
         <ScrollReveal className="mb-10 max-w-3xl">

@@ -7,6 +7,7 @@ import { Check } from "lucide-react";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 import { artists } from "../data/artists.js";
+import { demoImages } from "../data/demoImages.js";
 import { services } from "../data/services.js";
 
 const sizes = ["Small", "Medium", "Large", "Full Sleeve", "Full Body"];
@@ -74,8 +75,11 @@ export default function Booking() {
         <link rel="canonical" href="https://www.oracletattoo.in/booking" />
       </Helmet>
 
-      <section className="page-hero">
-        <ScrollReveal>
+      <section className="relative flex min-h-[64svh] items-end overflow-hidden bg-ink pb-12 pt-32 sm:min-h-[70svh] sm:pb-16 sm:pt-40 md:pt-52">
+        <img src={demoImages.consultation} alt="Tattoo appointment consultation at Oracle Tattoo" className="absolute inset-0 h-full w-full object-cover opacity-58" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.94)_0%,rgba(0,0,0,0.72)_48%,rgba(0,0,0,0.28)_100%)]" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
+        <ScrollReveal className="section-shell relative z-10">
           <p className="page-hero-eyebrow">Booking</p>
           <h1 className="page-hero-title page-hero-title--narrow">Reserve Your Spot</h1>
           <p className="page-hero-lead">Fill the form below — we'll confirm within 24 hours</p>

@@ -1,8 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Instagram, MapPin, Phone } from "lucide-react";
+import ImageHero from "../components/ImageHero.jsx";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
+import { demoImages } from "../data/demoImages.js";
 
 export default function Contact() {
   return (
@@ -14,12 +16,14 @@ export default function Contact() {
         <link rel="canonical" href="https://www.oracletattoo.in/contact" />
       </Helmet>
 
-      <section className="page-hero">
-        <ScrollReveal>
-          <p className="page-hero-eyebrow">Contact</p>
-          <h1 className="page-hero-title page-hero-title--narrow">Oracle Tattoo</h1>
-        </ScrollReveal>
-      </section>
+      <ImageHero
+        image={demoImages.studio}
+        alt="Oracle Tattoo studio contact"
+        eyebrow="Contact"
+        title="Oracle Tattoo"
+        lead="Call, WhatsApp, or visit our Ranchi studio for tattoo consultations, appointments, and piercing guidance."
+        titleClassName="max-w-4xl"
+      />
 
       <section className="page-section grid gap-8 sm:gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <ScrollReveal className="space-y-8 sm:space-y-10">

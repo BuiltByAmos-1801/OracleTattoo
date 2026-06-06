@@ -1,9 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import ImageHero from "../components/ImageHero.jsx";
 import PageTransition from "../components/PageTransition.jsx";
-import ScrollReveal from "../components/ScrollReveal.jsx";
 import { blogPosts } from "../data/blogPosts.js";
+import { demoImages } from "../data/demoImages.js";
 
 export default function Blog() {
   return (
@@ -15,12 +16,13 @@ export default function Blog() {
         <link rel="canonical" href="https://www.oracletattoo.in/blog" />
       </Helmet>
 
-      <section className="page-hero">
-        <ScrollReveal>
-          <p className="page-hero-eyebrow">Blog</p>
-          <h1 className="page-hero-title page-hero-title--wide">Tattoo Tips & Guides</h1>
-        </ScrollReveal>
-      </section>
+      <ImageHero
+        image={demoImages.blogHero}
+        alt="Tattoo tips and aftercare guide"
+        eyebrow="Blog"
+        title="Tattoo Tips & Guides"
+        lead="Read studio guidance for first tattoos, aftercare, style choices, cover-ups, and piercing care."
+      />
 
       <section className="page-section">
         <motion.div

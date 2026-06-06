@@ -45,13 +45,16 @@ const storyHighlights = [
   "Custom work for every story"
 ];
 
+const galleryImageByCategory = (category) =>
+  demoImages.gallery.find((item) => item.category === category)?.image || demoImages.gallery[0].image;
+
 const tattooCategories = [
-  { title: "Religious Tattoos", image: demoImages.gallery[3].image },
-  { title: "Realism Tattoos", image: demoImages.gallery[0].image },
-  { title: "Mandala Tattoos", image: demoImages.gallery[1].image },
+  { title: "Religious Tattoos", image: galleryImageByCategory("Religious Tattoos") },
+  { title: "Realism Tattoos", image: galleryImageByCategory("Portrait") },
+  { title: "Mandala Tattoos", image: demoImages.gallery.find((item) => item.title === "Sacred floral mandala")?.image || galleryImageByCategory("Religious Tattoos") },
   { title: "Cover-Up Tattoos", image: demoImages.hygiene },
-  { title: "Lettering Tattoos", image: demoImages.gallery[4].image },
-  { title: "Piercings", image: demoImages.gallery[8].image }
+  { title: "Lettering Tattoos", image: galleryImageByCategory("Small Tattoos") },
+  { title: "Piercings", image: galleryImageByCategory("Piercings") }
 ];
 
 const processSteps = [
@@ -123,8 +126,8 @@ export default function Home() {
 
       <section className="relative flex min-h-[92svh] items-center overflow-hidden bg-ink pt-24 sm:min-h-screen sm:pt-28">
         <motion.img
-          src={jennyOracleTattoo}
-          alt="Oracle Tattoo artist in the studio"
+          src={demoImages.studio}
+          alt="Professional tattoo artist working in a studio"
           className="absolute inset-0 h-full w-full object-cover object-[52%_center] sm:object-center"
           style={{ y: heroImageY }}
         />
@@ -365,7 +368,7 @@ export default function Home() {
             {testimonials.map((quote, index) => (
               <ScrollReveal key={quote} delay={index * 0.08} className="border-t border-white/18 pt-6 sm:pt-8">
                 <p className="mb-5 text-sm font-bold tracking-[0.18em] text-bone sm:mb-8">★★★★★</p>
-                <blockquote className="font-serif text-2xl leading-tight text-bone/86 sm:text-3xl">“{quote}”</blockquote>
+                <blockquote className="font-serif text-2xl leading-tight text-bone/86 sm:text-3xl">"{quote}"</blockquote>
               </ScrollReveal>
             ))}
           </div>
