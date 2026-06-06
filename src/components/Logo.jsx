@@ -8,7 +8,7 @@ export default function Logo({ className = "", imageClassName = "", invert = fal
       <img
         src={logoSrc}
         alt="Oracle Tattoo"
-        className={`h-[4rem] w-auto object-contain object-center sm:h-[4.75rem] ${imageClassName} ${invert ? "invert" : ""}`}
+        className={`h-[4rem] w-auto object-contain object-center sm:h-[5.75rem] ${imageClassName} ${invert ? "invert" : ""}`}
         width={150}
         height={38}
       />
