@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="grid gap-8 border-b border-white/10 pb-10 md:grid-cols-[1fr_auto] md:items-end">
           <div className="max-w-2xl">
             <Link to="/" aria-label="Oracle Tattoo home" className="inline-flex">
-              <img src={logoSrc} alt="Oracle Tattoo" className="h-16 w-auto object-contain invert sm:h-20" />
+              <img src={logoSrc} alt="Oracle Tattoo" className="h-16 w-auto object-contain invert sm:h-30" />
             </Link>
             <h2 className="mt-6 max-w-2xl text-2xl font-black leading-tight text-bone sm:text-3xl md:text-4xl">
               Custom tattoos in Ranchi, made with clean design and careful studio practice.
