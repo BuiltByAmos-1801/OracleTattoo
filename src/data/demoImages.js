@@ -22,7 +22,6 @@ import featured04 from "../images/Screenshot 2026-06-06 235906.png";
 import featured05 from "../images/Screenshot 2026-06-06 235950.png";
 import featured06 from "../images/Screenshot 2026-06-07 000014.png";
 import featured07 from "../images/Screenshot 2026-06-07 000048.png";
-import featured08 from "../images/Screenshot 2026-06-07 000135.png";
 import tattooProject1 from "../images/tattooproject1.webp";
 import tattooProject2 from "../images/tattooproject2.webp";
 import tattooProject3 from "../images/tattooproject3.webp";
@@ -46,8 +45,7 @@ export const demoImages = {
     featured04,
     featured05,
     featured06,
-    featured07,
-    featured08
+    featured07
   ],
   services: [
     pexels("28496766", 900),
