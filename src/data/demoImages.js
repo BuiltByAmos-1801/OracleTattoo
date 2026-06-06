@@ -15,6 +15,14 @@ import gallery14 from "../images/Screenshot 2026-06-06 233616.png";
 import gallery15 from "../images/Screenshot 2026-06-06 233635.png";
 import gallery16 from "../images/Screenshot 2026-06-06 233700.png";
 import gallery17 from "../images/Screenshot 2026-06-06 233716.png";
+import featured01 from "../images/Screenshot 2026-06-06 235813.png";
+import featured02 from "../images/Screenshot 2026-06-06 235830.png";
+import featured03 from "../images/Screenshot 2026-06-06 235858.png";
+import featured04 from "../images/Screenshot 2026-06-06 235906.png";
+import featured05 from "../images/Screenshot 2026-06-06 235950.png";
+import featured06 from "../images/Screenshot 2026-06-07 000014.png";
+import featured07 from "../images/Screenshot 2026-06-07 000048.png";
+import featured08 from "../images/Screenshot 2026-06-07 000135.png";
 import tattooProject1 from "../images/tattooproject1.webp";
 import tattooProject2 from "../images/tattooproject2.webp";
 import tattooProject3 from "../images/tattooproject3.webp";
@@ -32,10 +40,14 @@ export const demoImages = {
   consultation: pexels("28919353", 1200),
   hygiene: pexels("20339302", 1200),
   featured: [
-    pexels("35426254", 1200),
-    pexels("35426244", 1000),
-    pexels("35426242", 1000),
-    pexels("35554665", 1200)
+    featured01,
+    featured02,
+    featured03,
+    featured04,
+    featured05,
+    featured06,
+    featured07,
+    featured08
   ],
   services: [
     pexels("28496766", 900),
