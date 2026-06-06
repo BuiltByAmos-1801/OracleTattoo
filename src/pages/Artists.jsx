@@ -43,7 +43,7 @@ export default function Artists() {
             </p>
             <a
               href={bookingWhatsAppLink}
-              className="mt-8 inline-flex min-h-14 w-fit items-center justify-center gap-3 rounded-lg bg-[#5438ff] px-7 text-base font-extrabold text-white shadow-[0_18px_42px_rgba(84,56,255,0.28)] transition hover:-translate-y-0.5 hover:bg-[#654cff] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+              className="mt-8 inline-flex min-h-14 w-fit items-center justify-center gap-3 rounded-lg border border-white/18 bg-bone px-7 text-base font-extrabold text-ink shadow-[0_18px_42px_rgba(255,255,255,0.12)] transition hover:-translate-y-0.5 hover:bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bone"
               target="_blank"
               rel="noreferrer"
             >
