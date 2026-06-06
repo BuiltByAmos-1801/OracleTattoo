@@ -1,11 +1,3 @@
-import tattooProject2 from "../images/tattooproject2.webp";
-import tattooProject3 from "../images/tattooproject3.webp";
-import tattooProject14 from "../images/tattooproject14.webp";
-import tattooProject15 from "../images/tattooproject15.webp";
-import tattooProject17 from "../images/tattooproject17.webp";
-import tattooProject20 from "../images/tattooproject20.webp";
-import tattooProject123 from "../images/tattooproject123.webp";
-
 const unsplash = (id, width = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=88`;
 
@@ -62,13 +54,13 @@ export const demoImages = {
     unsplash("photo-1562962230-16e4623d36e6", 900),
     unsplash("photo-1542727365-19732a80dcfd", 900)
   ],
-  blogHero: tattooProject123,
+  blogHero: pexels("28919353", 1600),
   blog: [
-    tattooProject15,
-    tattooProject14,
-    tattooProject17,
-    tattooProject2,
-    tattooProject3,
-    tattooProject20
+    pexels("20339302", 1000),
+    pexels("13345926", 1000),
+    pexels("28919353", 1000),
+    pexels("11364054", 1000),
+    pexels("28496766", 1000),
+    pexels("11178572", 1000)
   ]
 };
