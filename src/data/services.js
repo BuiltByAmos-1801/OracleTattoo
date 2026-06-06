@@ -13,22 +13,7 @@ import {
   Waves
 } from "lucide-react";
 
-import serviceRealistic from "../images/Screenshot 2026-06-06 233550.png";
-import serviceReligious from "../images/Screenshot 2026-06-06 233429.png";
-import serviceCouple from "../images/Screenshot 2026-06-06 233616.png";
-import serviceSmall from "../images/Screenshot 2026-06-06 233340.png";
-import serviceLettering from "../images/Screenshot 2026-06-06 233400.png";
-import serviceMandala from "../images/Screenshot 2026-06-06 233607.png";
-import serviceSleeve from "../images/Screenshot 2026-06-06 235906.png";
-import serviceTribal from "../images/Screenshot 2026-06-06 233447.png";
-import servicePiercing from "../images/Screenshot 2026-06-06 235950.png";
-import serviceNosePiercing from "../images/Screenshot 2026-06-07 000014.png";
-import serviceNavelPiercing from "../images/Screenshot 2026-06-07 000048.png";
-import serviceAftercare from "../images/Screenshot 2026-06-06 235830.png";
-import serviceCoverUp from "../images/Screenshot 2026-06-06 235813.png";
-import serviceDesign from "../images/Screenshot 2026-06-06 233350.png";
-import serviceFinishing from "../images/Screenshot 2026-06-06 235858.png";
-import serviceTouchUps from "../images/Screenshot 2026-06-06 233700.png";
+const pexelsImage = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=900`;
 
 export const services = [
   {
@@ -36,7 +21,7 @@ export const services = [
     name: "Realistic Tattoos",
     category: "TATTOO SERVICES",
     icon: Brush,
-    image: serviceRealistic,
+    image: pexelsImage("7147771"),
     link: "https://oracleinktattoo.com/reliable-tattoos/",
     galleryCategory: "Portrait",
     description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style.",
@@ -52,7 +37,7 @@ export const services = [
     name: "Religious Tattoos",
     category: "TATTOO SERVICES",
     icon: Sparkles,
-    image: serviceReligious,
+    image: pexelsImage("11178572"),
     link: "https://oracleinktattoo.com/religious-tattoo/",
     galleryCategory: "Religious Tattoos",
     description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning.",
@@ -68,7 +53,7 @@ export const services = [
     name: "Couple Tattoo",
     category: "TATTOO SERVICES",
     icon: Heart,
-    image: serviceCouple,
+    image: pexelsImage("13771118"),
     link: "https://oracleinktattoo.com/couple-tattoo/",
     galleryCategory: "Couples Tattoos",
     description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship.",
@@ -84,7 +69,7 @@ export const services = [
     name: "Small Tattoo Designs",
     category: "TATTOO SERVICES",
     icon: Feather,
-    image: serviceSmall,
+    image: pexelsImage("8258889"),
     link: "https://oracleinktattoo.com/small-tattoo-design/",
     galleryCategory: "Small Tattoos",
     description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality.",
@@ -100,7 +85,7 @@ export const services = [
     name: "Custom Tattoo Lettering",
     category: "TATTOO SERVICES",
     icon: PenLine,
-    image: serviceLettering,
+    image: pexelsImage("10435594"),
     description: "Refined scripts, names, quotes, and typographic tattoos composed for your body and story."
   },
   {
@@ -108,7 +93,7 @@ export const services = [
     name: "Mandala Tattoos",
     category: "TATTOO SERVICES",
     icon: Flower2,
-    image: serviceMandala,
+    image: pexelsImage("4799384"),
     description: "Symmetric mandala work with calibrated spacing, crisp linework, and meditative structure."
   },
   {
@@ -116,7 +101,7 @@ export const services = [
     name: "Sleeve Tattoos",
     category: "TATTOO SERVICES",
     icon: Layers3,
-    image: serviceSleeve,
+    image: pexelsImage("1461816"),
     description: "Half and full sleeves designed as cohesive visual systems, not disconnected patches."
   },
   {
@@ -124,7 +109,7 @@ export const services = [
     name: "Polynesian Tribal Tattoos",
     category: "TATTOO SERVICES",
     icon: Waves,
-    image: serviceTribal,
+    image: pexelsImage("2183131"),
     description: "Bold tribal compositions shaped around rhythm, symbolism, and anatomical movement."
   },
   {
@@ -132,7 +117,7 @@ export const services = [
     name: "Piercing",
     category: "PIERCING SERVICES",
     icon: BadgeCheck,
-    image: servicePiercing,
+    image: pexelsImage("7400018"),
     link: "https://oracleinktattoo.com/piercing/",
     description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience."
   },
@@ -141,7 +126,7 @@ export const services = [
     name: "Nose Piercing",
     category: "PIERCING SERVICES",
     icon: Sparkles,
-    image: serviceNosePiercing,
+    image: pexelsImage("12435651"),
     description: "Precise nose piercing for studs or rings, focused on symmetry, comfort, and healing."
   },
   {
@@ -149,7 +134,7 @@ export const services = [
     name: "Navel Piercing",
     category: "PIERCING SERVICES",
     icon: CircleDot,
-    image: serviceNavelPiercing,
+    image: pexelsImage("7230416"),
     description: "Clean, careful navel piercing with placement guidance and clear aftercare direction."
   },
   {
@@ -157,7 +142,7 @@ export const services = [
     name: "Tattoo Aftercare",
     category: "AFTERCARE & FINISHING",
     icon: ShieldCheck,
-    image: serviceAftercare,
+    image: pexelsImage("7147769"),
     description: "Healing guidance and care routines that protect detail, saturation, and long-term clarity."
   },
   {
@@ -165,7 +150,7 @@ export const services = [
     name: "Tattoo Cover-Ups & Reworkings",
     category: "AFTERCARE & FINISHING",
     icon: IterationCcw,
-    image: serviceCoverUp,
+    image: pexelsImage("12038947"),
     description: "Strategic redesigns that transform old tattoos into stronger, cleaner work."
   },
   {
@@ -173,7 +158,7 @@ export const services = [
     name: "Tattoo Design",
     category: "AFTERCARE & FINISHING",
     icon: Brush,
-    image: serviceDesign,
+    image: pexelsImage("7504856"),
     description: "Custom concept development for clients who want a piece created before the first session."
   },
   {
@@ -181,7 +166,7 @@ export const services = [
     name: "Tattoo Finishing",
     category: "AFTERCARE & FINISHING",
     icon: BadgeCheck,
-    image: serviceFinishing,
+    image: pexelsImage("8187555"),
     description: "Completion sessions that refine unfinished work with cleaner depth, balance, and detail."
   },
   {
@@ -189,7 +174,7 @@ export const services = [
     name: "Tattoo Touch-Ups",
     category: "AFTERCARE & FINISHING",
     icon: Sparkles,
-    image: serviceTouchUps,
+    image: pexelsImage("7203741"),
     description: "Careful refresh sessions for healed tattoos that need sharper lines or restored contrast."
   }
 ];
