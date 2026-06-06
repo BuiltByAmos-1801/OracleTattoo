@@ -84,13 +84,13 @@ export const demoImages = {
     unsplash("photo-1562962230-16e4623d36e6", 900),
     unsplash("photo-1542727365-19732a80dcfd", 900)
   ],
-  blogHero: pexels("28919353", 1600),
+  blogHero: featured02,
   blog: [
-    pexels("20339302", 1000),
-    pexels("13345926", 1000),
-    pexels("28919353", 1000),
-    pexels("11364054", 1000),
-    pexels("28496766", 1000),
-    pexels("11178572", 1000)
+    featured02,
+    featured01,
+    gallery05,
+    gallery02,
+    gallery13,
+    featured05
   ]
 };
