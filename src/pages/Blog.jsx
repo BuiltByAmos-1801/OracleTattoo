@@ -22,6 +22,7 @@ export default function Blog() {
         eyebrow="Blog"
         title="Tattoo Tips & Guides"
         lead="Read studio guidance for first tattoos, aftercare, style choices, cover-ups, and piercing care."
+        imageClassName="grayscale"
       />
 
       <section className="page-section">
