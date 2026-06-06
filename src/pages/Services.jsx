@@ -6,11 +6,11 @@ import { ArrowRight, BadgeCheck, ShieldCheck, Sparkles } from "lucide-react";
 import ImageHero from "../components/ImageHero.jsx";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
-import realisticImg from "../images/tattooproject21.webp";
-import religiousImg from "../images/tattooproject17.webp";
-import coupleImg from "../images/tattooproject18.webp";
+import realisticImg from "../images/tattooproject3.webp";
+import religiousImg from "../images/tattooproject1.webp";
+import coupleImg from "../images/tattooproject2.webp";
 import smallImg from "../images/tattooproject14.webp";
-import piercingImg from "../images/tattooproject16.webp";
+import piercingImg from "../images/tattooproject14.webp";
 import { demoImages } from "../data/demoImages.js";
 import { serviceCategories, services } from "../data/services.js";
 
