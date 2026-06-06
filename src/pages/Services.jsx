@@ -6,11 +6,6 @@ import { ArrowRight, BadgeCheck, ShieldCheck, Sparkles } from "lucide-react";
 import ImageHero from "../components/ImageHero.jsx";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
-import realisticImg from "../images/tattooproject3.webp";
-import religiousImg from "../images/tattooproject1.webp";
-import coupleImg from "../images/tattooproject2.webp";
-import smallImg from "../images/tattooproject14.webp";
-import piercingImg from "../images/tattooproject14.webp";
 import { demoImages } from "../data/demoImages.js";
 import { serviceCategories, services } from "../data/services.js";
 
@@ -81,31 +76,31 @@ export default function Services() {
               id: "realistic-tattoos",
               title: "Realistic Tattoos",
               description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style.",
-              image: realisticImg
+              image: services.find((service) => service.id === "realistic-tattoos")?.image
             },
             {
               id: "religious-tattoos",
               title: "Religious Tattoos",
               description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning.",
-              image: religiousImg
+              image: services.find((service) => service.id === "religious-tattoos")?.image
             },
             {
               id: "couple-tattoo",
               title: "Couple Tattoo",
               description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship.",
-              image: coupleImg
+              image: services.find((service) => service.id === "couple-tattoo")?.image
             },
             {
               id: "small-tattoo-designs",
               title: "Small Tattoo Designs",
               description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality.",
-              image: smallImg
+              image: services.find((service) => service.id === "small-tattoo-designs")?.image
             },
             {
               id: "piercing",
               title: "Piercing",
               description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience.",
-              image: piercingImg
+              image: services.find((service) => service.id === "piercing")?.image
             }
           ].map((item) => (
             <article
