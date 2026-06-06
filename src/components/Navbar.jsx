@@ -98,13 +98,7 @@ export default function Navbar() {
             </button>
           </div>
           {isHomeTop ? (
-            <Link
-              to="/"
-              className="order-2 text-2xl font-extrabold text-bone sm:text-4xl"
-              aria-label="Oracle Tattoo home"
-            >
-              OracleTattoo
-            </Link>
+            <Logo className="order-2" imageClassName="h-12 sm:h-14" invert />
           ) : (
             <div className="order-1">
               <Logo />
