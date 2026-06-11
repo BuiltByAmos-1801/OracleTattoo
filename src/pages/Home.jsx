@@ -217,7 +217,7 @@ export default function Home() {
           <ScrollReveal className="relative overflow-hidden bg-coal">
             <img
               src={jennyOracleTattoo}
-              alt="Oracle Tattoo studio artist"
+              alt="Oracle Tattoo studio artist Jenny"
               className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
             />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_42%,#050505_100%)]" />
@@ -238,6 +238,20 @@ export default function Home() {
               <p>
                 At Oracle Tattoo, customer satisfaction is our priority. From consultation to aftercare guidance, we make sure every client leaves with a tattoo they are proud to wear for life.
               </p>
+            </div>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center">
+              <Link
+                to="/artists/jenny"
+                className="inline-flex min-h-14 items-center justify-center rounded-lg bg-bone px-7 text-base font-extrabold text-ink transition hover:bg-mist"
+              >
+                More About Jenny
+              </Link>
+              <Link
+                to="/booking"
+                className="inline-flex min-h-14 items-center justify-center rounded-lg border border-white/18 px-7 text-base font-extrabold text-white transition hover:-translate-y-0.5 hover:bg-white/10"
+              >
+                Book Consultation
+              </Link>
             </div>
           </ScrollReveal>
         </div>

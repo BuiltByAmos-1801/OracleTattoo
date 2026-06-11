@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Award, BadgeCheck, Instagram, MapPin, Phone, ShieldCheck } from "lucide-react";
 import { demoImages } from "../data/demoImages.js";
 import logoSrc from "../images/Oracle_Tattoo_Logo.PNG";
@@ -55,6 +55,9 @@ const qualityPoints = [
 ];
 
 export default function Footer() {
+  const location = useLocation();
+  const shouldShowJennySection = location.pathname !== "/booking";
+
   return (
     <footer className="border-t border-white/10 bg-black">
       <div className="section-shell py-12 sm:py-16 md:py-20">
@@ -154,34 +157,36 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="grid gap-10 border-b border-white/10 py-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-          <div className="overflow-hidden border border-white/12">
-            <img src={jennyImage} alt="Jenny, Oracle Tattoo artist" className="aspect-[4/5] w-full object-cover object-center" />
-          </div>
-          <div>
-            <h3 className="text-xs font-black uppercase tracking-[0.24em] text-bone/52">The Artist</h3>
-            <p className="mt-4 text-xl font-black text-bone sm:text-2xl">Jenny</p>
-            <div className="mt-6 grid gap-4 text-sm leading-7 text-bone/64 sm:text-base sm:leading-8">
-              <p>
-                Hi, my name is Jenny and my journey as a tattoo artist is not just about art. It is about passion, struggle, and believing in a dream.
-              </p>
-              <p>
-                The road to becoming an artist was not easy. There were moments of doubt, challenges, and times when the future felt uncertain.
-              </p>
-              <p>
-                Today, every tattoo I create carries that same belief: patience, care, and a personal connection with the person wearing it.
-              </p>
+        {shouldShowJennySection && (
+          <div className="grid gap-10 border-b border-white/10 py-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+            <div className="overflow-hidden border border-white/12">
+              <img src={jennyImage} alt="Jenny, Oracle Tattoo artist" className="aspect-[4/5] w-full object-cover object-center" />
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/artists" className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-bone px-5 text-sm font-extrabold text-ink transition hover:bg-mist">
-                More About Jenny <ArrowRight size={16} />
-              </Link>
-              <Link to="/booking" className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/18 px-5 text-sm font-bold text-bone/82 transition hover:border-white/46 hover:text-bone">
-                Book Consultation
-              </Link>
+            <div>
+              <h3 className="text-xs font-black uppercase tracking-[0.24em] text-bone/52">The Artist</h3>
+              <p className="mt-4 text-xl font-black text-bone sm:text-2xl">Jenny</p>
+              <div className="mt-6 grid gap-4 text-sm leading-7 text-bone/64 sm:text-base sm:leading-8">
+                <p>
+                  Hi, my name is Jenny and my journey as a tattoo artist is not just about art. It is about passion, struggle, and believing in a dream.
+                </p>
+                <p>
+                  The road to becoming an artist was not easy. There were moments of doubt, challenges, and times when the future felt uncertain.
+                </p>
+                <p>
+                  Today, every tattoo I create carries that same belief: patience, care, and a personal connection with the person wearing it.
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link to="/artists/jenny" className="inline-flex min-h-12 items-center gap-2 rounded-lg bg-bone px-5 text-sm font-extrabold text-ink transition hover:bg-mist">
+                  More About Jenny <ArrowRight size={16} />
+                </Link>
+                <Link to="/booking" className="inline-flex min-h-12 items-center justify-center rounded-lg border border-white/18 px-5 text-sm font-bold text-bone/82 transition hover:border-white/46 hover:text-bone">
+                  Book Consultation
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        )}
 
         <div className="grid gap-10 py-10 sm:grid-cols-2 lg:grid-cols-[0.8fr_0.9fr_1.4fr]">
           <div>
