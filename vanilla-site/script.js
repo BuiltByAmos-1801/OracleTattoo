@@ -360,7 +360,7 @@ function render() {
   menuPanel.classList.remove("open");
   bindPageEvents();
   revealVisible();
-  window.scrollTo({ top: 0, behavior: "instant" });
+  window.scrollTo({ top: 0, behavior: "auto" });
 }
 
 function bindPageEvents() {
