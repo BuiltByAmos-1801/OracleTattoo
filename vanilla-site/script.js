@@ -1,4 +1,4 @@
-const asset = (name) => `assets/${name}`;
+﻿const asset = (name) => `assets/${name}`;
 const pexels = (id, width = 1400) =>
   `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=${width}`;
 
@@ -326,7 +326,7 @@ function blogPage() {
         ${blogPosts.map((post) => `
           <article class="card blog-card reveal">
             <div style="height: 250px; margin: -28px -28px 24px; overflow: hidden"><img src="${post.image}" alt="${post.title}"></div>
-            <small>${post.category} · 5-min read · ${post.date}</small>
+            <small>${post.category} Â· 5-min read Â· ${post.date}</small>
             <h3>${post.title}</h3>
             <p>${post.excerpt}</p>
           </article>
