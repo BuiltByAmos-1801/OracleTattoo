@@ -242,18 +242,11 @@ export default function Home() {
       <section className="border-y border-white/10 bg-coal py-12 sm:py-16 md:py-28">
         <div className="section-shell grid gap-8 sm:gap-10 lg:grid-cols-[0.9fr_1.35fr] lg:items-center">
           <ScrollReveal className="relative overflow-hidden bg-coal">
-            <div className="grid grid-cols-2 gap-1">
-              <img
-                src={landingPageImage}
-                alt="Oracle Tattoo studio landing page"
-                className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
-              />
-              <img
-                src={jennyImage}
-                alt="Jenny at Oracle Tattoo"
-                className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
-              />
-            </div>
+            <img
+              src={landingPageImage}
+              alt="Oracle Tattoo studio landing page"
+              className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
+            />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_42%,#050505_100%)]" />
             <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/3 bg-gradient-to-r from-transparent to-coal lg:block" />
           </ScrollReveal>
