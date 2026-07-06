@@ -12,8 +12,8 @@ export default function Artists() {
     <PageTransition>
       <Helmet>
         <title>Best Tattoo Artists in Ranchi | Oracle Tattoo</title>
-        <meta name="description" content="Meet tattoo artists in Ranchi at Oracle Tattoo, specialists in realism tattoos, mandala tattoos, tribal work, fine line tattoos, cover-ups, and custom designs." />
-        <meta name="keywords" content="best tattoo artist in Ranchi, tattoo artists Ranchi, female tattoo artist Ranchi, realism tattoo artist Ranchi, custom tattoo artist Ranchi, Oracle Tattoo artists" />
+        <meta name="description" content="Meet tattoo artists in Ranchi at Oracle Tattoo, specialists in portrait tattoos, religious tattoos, band tattoos, animal tattoos, small tattoos, and piercings." />
+        <meta name="keywords" content="best tattoo artist in Ranchi, tattoo artists Ranchi, female tattoo artist Ranchi, portrait tattoo artist Ranchi, religious tattoo artist Ranchi, Oracle Tattoo artists" />
         <link rel="canonical" href="https://www.oracletattoo.in/artists" />
       </Helmet>
 

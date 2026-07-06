@@ -15,15 +15,15 @@ export const blogPosts = [
     category: "Style Guide",
     readTime: "5-min read",
     image: demoImages.blog[1],
-    excerpt: "From realism to fine line and mandala, compare the visual language, healing needs, and best placements."
+    excerpt: "Compare portrait tattoos, band designs, small ink, religious symbols, and animal pieces to find the right studio style."
   },
   {
-    title: "Polynesian & Tribal Tattoos: History, Meaning & Design Ideas",
+    title: "Band Tattoo History & Design Ideas",
     date: "May 22, 2025",
-    category: "Tribal",
+    category: "Band Tattoos",
     readTime: "5-min read",
     image: demoImages.blog[2],
-    excerpt: "Understand motifs, flow, and respect in tribal tattoo design before planning a statement piece."
+    excerpt: "Explore armband ideas, symbolic band flow, and design approaches for strong wrist and arm tattoo work."
   },
   {
     title: "Your First Tattoo in Ranchi? Here's Everything You Need to Know",
@@ -34,19 +34,19 @@ export const blogPosts = [
     excerpt: "A practical first-timer guide covering consultation, pain, pricing factors, preparation, and aftercare basics."
   },
   {
-    title: "Mandala Tattoos: Symbolism, Styles and Placement Guide",
+    title: "Religious Tattoo Symbolism & Placement Guide",
     date: "August 09, 2025",
-    category: "Mandala",
+    category: "Religious Tattoos",
     readTime: "5-min read",
     image: demoImages.blog[4],
-    excerpt: "Explore how mandala tattoos use symmetry, sacred geometry, and body placement to create balance."
+    excerpt: "Explore how religious tattoos use sacred symbols and thoughtful placement to create meaningful spiritual ink."
   },
   {
-    title: "Cover-Up Tattoos: Can Any Tattoo Be Covered? Expert Answers",
+    title: "Piercing Care & Healing Guide",
     date: "October 03, 2025",
-    category: "Cover-Up",
+    category: "Piercings",
     readTime: "5-min read",
     image: demoImages.blog[5],
-    excerpt: "Learn what makes a cover-up possible, when reworking is smarter, and how artists build better second chances."
+    excerpt: "Learn safe piercing aftercare, healing stages, and studio advice for keeping your new piercing healthy."
   }
 ];

@@ -11,8 +11,8 @@ export default function Contact() {
     <PageTransition>
       <Helmet>
         <title>Contact Tattoo Studio in Ranchi | Oracle Tattoo Tilta</title>
-        <meta name="description" content="Contact Oracle Tattoo, a tattoo studio in Ranchi near Ratu Road and Tilta. Call or WhatsApp +91 76670 59851 for tattoo appointments, piercings, and consultations." />
-        <meta name="keywords" content="tattoo studio Ranchi contact, tattoo shop Ranchi, Oracle Tattoo Ranchi, tattoo in Tilta Ranchi, tattoo near Ratu Road, piercing Ranchi contact" />
+        <meta name="description" content="Contact Oracle Tattoo, a tattoo studio in Ranchi. Call or WhatsApp +91 76670 59851 for tattoo appointments and consultations." />
+        <meta name="keywords" content="tattoo studio Ranchi contact, tattoo shop Ranchi, Oracle Tattoo Ranchi" />
         <link rel="canonical" href="https://www.oracletattoo.in/contact" />
       </Helmet>
 
@@ -21,7 +21,7 @@ export default function Contact() {
         alt="Oracle Tattoo studio contact"
         eyebrow="Contact"
         title="Oracle Tattoo"
-        lead="Call, WhatsApp, or visit our Ranchi studio for tattoo consultations, appointments, and piercing guidance."
+        lead="Call, WhatsApp, or visit our Ranchi studio for tattoo consultations and appointments."
         titleClassName="max-w-4xl"
       />
 
@@ -29,7 +29,7 @@ export default function Contact() {
         <ScrollReveal className="space-y-8 sm:space-y-10">
           <div className="border-t border-white/14 pt-5 sm:pt-6">
             <h2 className="text-xs font-bold uppercase tracking-[0.22em] text-bone/48">Address</h2>
-            <p className="mt-4 text-lg leading-8 text-bone sm:mt-5 sm:text-2xl sm:leading-9">First floor, NH 75, Ratu Rd, beside Devi Mandap, opp. Sharda Automobiles TVS, Tilta, Ranchi, Jharkhand 835222</p>
+            <p className="mt-4 text-lg leading-8 text-bone sm:mt-5 sm:text-2xl sm:leading-9">217b, 2nd floor Patliputra Kurji Rd, New Patliputra Colony, Opposite-Punjab National Bank, Golamber, Patna, Bihar 800013</p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2 sm:gap-5">
             <a href="tel:+917667059851" className="group border border-white/14 p-5 transition-colors hover:border-white/46 sm:p-6">
@@ -44,9 +44,10 @@ export default function Contact() {
             </a>
           </div>
           <div className="space-y-3 text-sm leading-7 text-bone/64 sm:space-y-4 sm:text-base">
-            <p><span className="text-bone">Email:</span> info@oracletattoo.in</p>
+            <p><span className="text-bone">Email:</span> oracletattoo23@gmail.com</p>
+            <p><span className="text-bone">Instagram:</span> @ORACLETATTOOINDIA</p>
             <p><span className="text-bone">Working Hours:</span> Mon–Sat: 11:00 AM – 8:00 PM | Sunday: By Appointment</p>
-            <a href="https://maps.google.com/?q=Oracle%20Tattoo%20Tilta%20Ranchi%20Jharkhand" className="inline-block text-bone">View Location on Map</a>
+            <a href="https://maps.google.com/?q=217b%2C%202nd%20floor%20Patliputra%20Kurji%20Rd%2C%20New%20Patliputra%20Colony%2C%20Opposite-Punjab%20National%20Bank%2C%20Golamber%2C%20Patna%2C%20Bihar%20800013" className="inline-block text-bone">View Location on Map</a>
           </div>
           <div className="flex gap-3">
             <a href="https://www.instagram.com/oracletattooindia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-12 w-12 place-items-center border border-white/16 transition-colors hover:border-white"><Instagram size={18} /></a>
@@ -56,7 +57,7 @@ export default function Contact() {
         <ScrollReveal delay={0.08} className="min-h-[320px] overflow-hidden border border-white/12 bg-coal sm:min-h-[420px] md:min-h-[520px]">
           <iframe
             title="Oracle Tattoo location map"
-            src="https://maps.google.com/maps?q=Oracle%20Tattoo%2C%20Tilta%2C%20Ranchi%2C%20Jharkhand&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src="https://maps.google.com/maps?q=217b%2C%202nd%20floor%20Patliputra%20Kurji%20Rd%2C%20New%20Patliputra%20Colony%2C%20Opposite-Punjab%20National%20Bank%2C%20Golamber%2C%20Patna%2C%20Bihar%20800013&t=&z=15&ie=UTF8&iwloc=&output=embed"
             className="h-full min-h-[320px] w-full transition duration-700 sm:min-h-[420px] md:min-h-[520px]"
             loading="lazy"
           />

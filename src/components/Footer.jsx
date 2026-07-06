@@ -8,7 +8,6 @@ import jennyImage from "../images/Jenny_OracleTattoo.png.JPG";
 const footerLinks = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
-  { label: "Gallery", to: "/gallery" },
   { label: "Artists", to: "/artists" },
   { label: "Booking", to: "/booking" },
   { label: "Contact", to: "/contact" },
@@ -16,16 +15,16 @@ const footerLinks = [
 ];
 
 const specialties = [
-  "Realism & Portraits",
   "Religious Tattoos",
-  "Lettering & Scripts",
-  "Small Fine-Line Work",
-  "Cover-Ups & Rework"
+  "Band Tattoos",
+  "Small Tattoos",
+  "Portrait",
+  "Animal Tattoos"
 ];
 
 const stats = [
   { value: "1,250+", label: "Satisfied Customers" },
-  { value: "15th", label: "Years of Experience" },
+  { value: "15+", label: "Years of Experience" },
   { value: "750+", label: "Tattoos & Artworks" },
   { value: "45+", label: "Creative Concepts" }
 ];
@@ -33,7 +32,7 @@ const stats = [
 const skillStats = [
   { label: "Experience", value: "95%" },
   { label: "Tattoo", value: "97%" },
-  { label: "Piercing", value: "93%" }
+  { label: "Consultation", value: "93%" }
 ];
 
 const qualityPoints = [
@@ -167,13 +166,13 @@ export default function Footer() {
               <p className="mt-4 text-xl font-black text-bone sm:text-2xl">Jenny</p>
               <div className="mt-6 grid gap-4 text-sm leading-7 text-bone/64 sm:text-base sm:leading-8">
                 <p>
-                  Hi, my name is Jenny and my journey as a tattoo artist is not just about art. It is about passion, struggle, and believing in a dream.
+                  Hi, my name is Jenny and my journey as a tattoo artist is not just about art. It is about passion, struggle, patience, and believing in a dream.
                 </p>
                 <p>
                   The road to becoming an artist was not easy. There were moments of doubt, challenges, and times when the future felt uncertain.
                 </p>
                 <p>
-                  Today, every tattoo I create carries that same belief: patience, care, and a personal connection with the person wearing it.
+                  Today, every tattoo I create carries that same belief: a patient approach, careful listening, and a personal connection with the person wearing it.
                 </p>
               </div>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -215,14 +214,14 @@ export default function Footer() {
             <h3 className="text-xs font-black uppercase tracking-[0.24em] text-bone/52">Visit Oracle Tattoo</h3>
             <address className="mt-5 flex max-w-2xl gap-3 not-italic text-sm leading-7 text-bone/64">
               <MapPin className="mt-1 shrink-0 text-bone/44" size={17} />
-              <span>First floor, NH 75, Ratu Rd, beside Devi Mandap, opp. Sharda Automobiles TVS, Tilta, Ranchi, Jharkhand 835222</span>
+              <span>217b, 2nd floor Patliputra Kurji Rd, New Patliputra Colony, Opposite-Punjab National Bank, Golamber, Patna, Bihar 800013</span>
             </address>
             <div className="mt-5 flex flex-col gap-2 text-sm font-semibold">
               <a href="tel:+917667059851" className="w-fit text-bone transition-colors hover:text-bone/72">+91 76670 59851</a>
               <a href="mailto:oracletattoo23@gmail.com" className="w-fit break-all text-bone/72 transition-colors hover:text-bone">oracletattoo23@gmail.com</a>
             </div>
             <a
-              href="https://maps.google.com/?q=Oracle%20Tattoo%20Tilta%20Ranchi"
+              href="https://maps.google.com/?q=217b%2C%202nd%20floor%20Patliputra%20Kurji%20Rd%2C%20New%20Patliputra%20Colony%2C%20Opposite-Punjab%20National%20Bank%2C%20Golamber%2C%20Patna%2C%20Bihar%20800013"
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-lg bg-bone px-5 text-sm font-extrabold text-ink transition hover:bg-mist"
@@ -234,19 +233,13 @@ export default function Footer() {
               <a href="https://www.instagram.com/oracletattooindia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noreferrer" aria-label="Instagram" className="grid h-11 w-11 place-items-center rounded-full border border-white/18 text-bone/78 transition-colors hover:border-white hover:bg-white/6 hover:text-bone">
                 <Instagram size={17} />
               </a>
-              <span className="text-xs font-black uppercase tracking-[0.18em] text-bone/46">@oracletattooindia</span>
+              <span className="text-xs font-black uppercase tracking-[0.18em] text-bone/46">@ORACLETATTOOINDIA</span>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-xs font-semibold text-bone/46 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2025 Oracle Tattoo. All rights reserved.</p>
-          <p>
-            Developed by{" "}
-            <a href="https://builtbyamos.great-site.net/?i=1" target="_blank" rel="noreferrer" className="text-bone underline decoration-white/30 underline-offset-4 transition-colors hover:text-bone/72">
-              BuiltByAmos
-            </a>
-          </p>
+          <p>© 2025 Oracle Tattoo. Developed by BuiltByAmos.</p>
         </div>
       </div>
     </footer>

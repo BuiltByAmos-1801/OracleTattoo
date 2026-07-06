@@ -8,16 +8,20 @@ import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 import { artists } from "../data/artists.js";
 import { demoImages } from "../data/demoImages.js";
-import { services } from "../data/services.js";
+import { serviceCategories, services } from "../data/services.js";
 
 const sizes = ["Small", "Medium", "Large", "Full Sleeve", "Full Body"];
+const orderedServices = serviceCategories
+  .map((category) => services.find((service) => service.category === category))
+  .filter(Boolean);
+const bookingWhatsAppNumber = "917667059851";
 
 const initialForm = {
   name: "",
   phone: "+91 ",
   email: "",
   artist: "No Preference",
-  service: services[0].name,
+  service: orderedServices[0].name,
   placement: "",
   size: "Medium",
   date: "",
@@ -30,7 +34,7 @@ export default function Booking() {
   const preselectedService = searchParams.get("service");
   const [form, setForm] = useState(() => ({
     ...initialForm,
-    service: preselectedService && services.some((service) => service.name === preselectedService) ? preselectedService : initialForm.service
+    service: preselectedService && orderedServices.some((service) => service.name === preselectedService) ? preselectedService : initialForm.service
   }));
   const [submitted, setSubmitted] = useState(false);
 
@@ -58,7 +62,18 @@ export default function Booking() {
 📅 Date: ${form.date}
 📝 Notes: ${notesBlock || "No additional notes"}`;
 
-    const url = `https://wa.me/917667059851?text=${encodeURIComponent(message)}`;
+    const cleanMessage = `*New Booking Request - Oracle Tattoo*
+Name: ${form.name}
+Phone: ${form.phone}
+Email: ${form.email}
+Service: ${form.service}
+Preferred Artist: ${form.artist}
+Placement: ${form.placement}
+Size: ${form.size}
+Date: ${form.date}
+Notes: ${notesBlock || "No additional notes"}`;
+
+    const url = `https://wa.me/${bookingWhatsAppNumber}?text=${encodeURIComponent(cleanMessage)}`;
 
     window.setTimeout(() => {
       window.open(url, "_blank", "noopener,noreferrer");
@@ -70,7 +85,7 @@ export default function Booking() {
     <PageTransition>
       <Helmet>
         <title>Book Tattoo Appointment in Ranchi | Oracle Tattoo</title>
-        <meta name="description" content="Book a tattoo appointment in Ranchi at Oracle Tattoo for custom tattoos, religious tattoos, cover-ups, small tattoos, couple tattoos, piercings, and first tattoo consultation." />
+        <meta name="description" content="Book a tattoo appointment in Ranchi at Oracle Tattoo for portrait tattoos, religious tattoos, band tattoos, small tattoos, animal tattoos, and piercings." />
         <meta name="keywords" content="book tattoo Ranchi, tattoo appointment Ranchi, tattoo in Ranchi, tattoo studio Ranchi, piercing appointment Ranchi, Oracle Tattoo booking" />
         <link rel="canonical" href="https://www.oracletattoo.in/booking" />
       </Helmet>
@@ -102,7 +117,7 @@ export default function Booking() {
             </label>
             <label className="min-w-0">
               <span className="form-label">Phone Number</span>
-              <input className="form-field" type="tel" inputMode="tel" value={form.phone} onChange={(event) => updateField("phone", event.target.value)} pattern="^\+91\s?[6-9]\d{9}$" title="Use Indian format: +91 9876543210" required />
+              <input className="form-field" type="tel" inputMode="tel" value={form.phone} onChange={(event) => updateField("phone", event.target.value)} title="Enter your phone number" required />
             </label>
             <label className="min-w-0">
               <span className="form-label">Email Address</span>
@@ -120,7 +135,7 @@ export default function Booking() {
             <label className="min-w-0">
               <span className="form-label">Service Required</span>
               <select className="form-field" value={form.service} onChange={(event) => updateField("service", event.target.value)}>
-                {services.map((service) => (
+                {orderedServices.map((service) => (
                   <option key={service.id}>{service.name}</option>
                 ))}
               </select>

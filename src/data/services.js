@@ -4,7 +4,6 @@ import {
   CircleDot,
   Feather,
   Flower2,
-  Heart,
   IterationCcw,
   Layers3,
   PenLine,
@@ -13,33 +12,72 @@ import {
   Waves
 } from "lucide-react";
 
-const pexelsImage = (id) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=900`;
+const religiousTattooImageModules = import.meta.glob("../images/Religious_Tattoo/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP}", {
+  eager: true,
+  import: "default"
+});
+const bandTattooImageModules = import.meta.glob("../images/Band_Tattoo/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP}", {
+  eager: true,
+  import: "default"
+});
+const smallTattooImageModules = import.meta.glob("../images/Small_Tattoo/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP}", {
+  eager: true,
+  import: "default"
+});
+const portraitTattooImageModules = import.meta.glob("../images/Portrait_Tattoo/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP}", {
+  eager: true,
+  import: "default"
+});
+const piercingTattooImageModules = import.meta.glob("../images/Piercing_Tattoo/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP}", {
+  eager: true,
+  import: "default"
+});
+const animalTattooImageModules = import.meta.glob("../images/Animal_Tattoo/*.{jpg,jpeg,JPG,JPEG,png,PNG,webp,WEBP}", {
+  eager: true,
+  import: "default"
+});
+
+const imageList = (modules) =>
+  Object.entries(modules)
+    .sort(([firstPath], [secondPath]) => firstPath.localeCompare(secondPath))
+    .map(([, image]) => image);
+
+const categoryImages = {
+  "Religious Tattoos": imageList(religiousTattooImageModules),
+  "Band Tattoos": imageList(bandTattooImageModules),
+  "Small Tattoos": imageList(smallTattooImageModules),
+  Portrait: imageList(portraitTattooImageModules),
+  Piercings: imageList(piercingTattooImageModules),
+  "Animal Tattoos": imageList(animalTattooImageModules)
+};
+
+const firstCategoryImage = (category) => categoryImages[category]?.[0] ?? "";
 
 export const services = [
   {
-    id: "realistic-tattoos",
-    name: "Realistic Tattoos",
-    category: "TATTOO SERVICES",
+    id: "portrait-tattoos",
+    name: "Portrait Tattoos",
+    category: "Portrait",
     icon: Brush,
-    image: pexelsImage("7147771"),
-    link: "https://oracleinktattoo.com/reliable-tattoos/",
-    galleryCategory: "Portrait",
-    description: "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive. Every design is carefully crafted to capture depth, expression, and beauty, making it a unique and eye-catching tattoo style.",
-    detailText: "Realistic tattoos at Oracle Tattoo are based on natural shapes, refined shading, and lifelike contrast. We create portraits, animal realism, and natural subjects with crisp detail and soft tonal depth.",
+    image: firstCategoryImage("Portrait"),
+    images: categoryImages.Portrait,
+    link: "https://oracleinktattoo.com/portrait-tattoos/",
+    description: "Portrait tattoos capture faces and lifelike subjects with depth, expression, and realistic shading for a personal body art statement.",
+    detailText: "Portrait tattoos at Oracle Tattoo are crafted with strong shading, detail, and soft contrast. We create expressive face work, photo-realistic visuals, and illustrative portraits that feel alive on the skin.",
     detailPoints: [
-      "Portrait and realism work with lifelike shading",
-      "Custom sizing and placement for best body flow",
+      "Detailed portrait and facial shading with expressive depth",
+      "Custom sizing and placement for natural body flow",
       "Reference-based artwork adapted to your skin tone"
     ]
   },
   {
     id: "religious-tattoos",
     name: "Religious Tattoos",
-    category: "TATTOO SERVICES",
+    category: "Religious Tattoos",
     icon: Sparkles,
-    image: pexelsImage("11178572"),
+    image: firstCategoryImage("Religious Tattoos"),
+    images: categoryImages["Religious Tattoos"],
     link: "https://oracleinktattoo.com/religious-tattoo/",
-    galleryCategory: "Religious Tattoos",
     description: "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures, crafted with precision to express faith, devotion, and timeless meaning.",
     detailText: "Religious tattoos at Oracle Tattoo are created with care for symbolism and spiritual meaning. Each design reflects your faith story while keeping the work clean, balanced, and powerful.",
     detailPoints: [
@@ -49,29 +87,45 @@ export const services = [
     ]
   },
   {
-    id: "couple-tattoo",
-    name: "Couple Tattoo",
-    category: "TATTOO SERVICES",
-    icon: Heart,
-    image: pexelsImage("13771118"),
-    link: "https://oracleinktattoo.com/couple-tattoo/",
-    galleryCategory: "Couples Tattoos",
-    description: "A couple tattoo is a meaningful and permanent symbol of love, trust, and deep connection between two people. It represents shared memories and the unique bond of a relationship.",
-    detailText: "Couple tattoos are designed to match and complement each partner’s style. Our artists create paired work that feels personal, symbolic, and wearable on both people.",
+    id: "band-tattoos",
+    name: "Band Tattoos",
+    category: "Band Tattoos",
+    icon: CircleDot,
+    image: firstCategoryImage("Band Tattoos"),
+    images: categoryImages["Band Tattoos"],
+    link: "https://oracleinktattoo.com/band-tattoos/",
+    description: "Bold armband and wrist band tattoos designed with clean linework, geometric flow, and strong contrast for modern body art.",
+    detailText: "Band tattoos at Oracle Tattoo are designed to wrap the body with balanced rhythm and strong visual flow. We blend linework, negative space, and pattern so each band feels sharp and wearable.",
     detailPoints: [
-      "Matching or mirrored designs for partners",
-      "Shared symbolism for love and memory",
-      "Flexible placement for wrists, arms, and ankles"
+      "Clean armband and wrist band compositions",
+      "Geometric, blackwork, and ornamental band styles",
+      "Placement that follows muscle and bone structure"
+    ]
+  },
+  {
+    id: "animal-tattoos",
+    name: "Animal Tattoos",
+    category: "Animal Tattoos",
+    icon: ShieldCheck,
+    image: firstCategoryImage("Animal Tattoos"),
+    images: categoryImages["Animal Tattoos"],
+    link: "https://oracleinktattoo.com/animal-tattoos/",
+    description: "Animal tattoos capture wildlife, pets, and symbolic creatures with expressive detail, texture, and strong composition.",
+    detailText: "Animal tattoos at Oracle Tattoo are designed from clear references and shaped for strong expression. We create wildlife pieces, pet portraits, and symbolic animal artwork with clean contrast and body-friendly placement.",
+    detailPoints: [
+      "Wildlife, pet, and symbolic animal tattoo designs",
+      "Realistic shading and texture adapted to your reference",
+      "Placement planning for clear expression and long-term detail"
     ]
   },
   {
     id: "small-tattoo-designs",
-    name: "Small Tattoo Designs",
-    category: "TATTOO SERVICES",
+    name: "Small Tattoos",
+    category: "Small Tattoos",
     icon: Feather,
-    image: pexelsImage("8258889"),
+    image: firstCategoryImage("Small Tattoos"),
+    images: categoryImages["Small Tattoos"],
     link: "https://oracleinktattoo.com/small-tattoo-design/",
-    galleryCategory: "Small Tattoos",
     description: "Small tattoos are subtle, stylish, and meaningful. Perfect for wrists, fingers, ankles, and collarbones, we create tiny designs like symbols, words, or minimal patterns that reflect your personality.",
     detailText: "Small tattoos demand precision and thoughtful composition. We design tiny pieces that look crisp in small spaces and keep their detail through healing.",
     detailPoints: [
@@ -81,106 +135,28 @@ export const services = [
     ]
   },
   {
-    id: "custom-lettering",
-    name: "Custom Tattoo Lettering",
-    category: "TATTOO SERVICES",
-    icon: PenLine,
-    image: pexelsImage("10435594"),
-    description: "Refined scripts, names, quotes, and typographic tattoos composed for your body and story."
-  },
-  {
-    id: "mandala-tattoos",
-    name: "Mandala Tattoos",
-    category: "TATTOO SERVICES",
-    icon: Flower2,
-    image: pexelsImage("4799384"),
-    description: "Symmetric mandala work with calibrated spacing, crisp linework, and meditative structure."
-  },
-  {
-    id: "sleeve-tattoos",
-    name: "Sleeve Tattoos",
-    category: "TATTOO SERVICES",
-    icon: Layers3,
-    image: pexelsImage("1461816"),
-    description: "Half and full sleeves designed as cohesive visual systems, not disconnected patches."
-  },
-  {
-    id: "polynesian-tribal",
-    name: "Polynesian Tribal Tattoos",
-    category: "TATTOO SERVICES",
-    icon: Waves,
-    image: pexelsImage("2183131"),
-    description: "Bold tribal compositions shaped around rhythm, symbolism, and anatomical movement."
-  },
-  {
     id: "piercing",
-    name: "Piercing",
-    category: "PIERCING SERVICES",
+    name: "Piercings",
+    category: "Piercings",
     icon: BadgeCheck,
-    image: pexelsImage("7400018"),
+    image: firstCategoryImage("Piercings"),
+    images: categoryImages.Piercings,
     link: "https://oracleinktattoo.com/piercing/",
-    description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience."
-  },
-  {
-    id: "nose-piercing",
-    name: "Nose Piercing",
-    category: "PIERCING SERVICES",
-    icon: Sparkles,
-    image: pexelsImage("12435651"),
-    description: "Precise nose piercing for studs or rings, focused on symmetry, comfort, and healing."
-  },
-  {
-    id: "navel-piercing",
-    name: "Navel Piercing",
-    category: "PIERCING SERVICES",
-    icon: CircleDot,
-    image: pexelsImage("7230416"),
-    description: "Clean, careful navel piercing with placement guidance and clear aftercare direction."
-  },
-  {
-    id: "tattoo-aftercare",
-    name: "Tattoo Aftercare",
-    category: "AFTERCARE & FINISHING",
-    icon: ShieldCheck,
-    image: pexelsImage("7147769"),
-    description: "Healing guidance and care routines that protect detail, saturation, and long-term clarity."
-  },
-  {
-    id: "cover-ups-reworkings",
-    name: "Tattoo Cover-Ups & Reworkings",
-    category: "AFTERCARE & FINISHING",
-    icon: IterationCcw,
-    image: pexelsImage("12038947"),
-    description: "Strategic redesigns that transform old tattoos into stronger, cleaner work."
-  },
-  {
-    id: "tattoo-design",
-    name: "Tattoo Design",
-    category: "AFTERCARE & FINISHING",
-    icon: Brush,
-    image: pexelsImage("7504856"),
-    description: "Custom concept development for clients who want a piece created before the first session."
-  },
-  {
-    id: "tattoo-finishing",
-    name: "Tattoo Finishing",
-    category: "AFTERCARE & FINISHING",
-    icon: BadgeCheck,
-    image: pexelsImage("8187555"),
-    description: "Completion sessions that refine unfinished work with cleaner depth, balance, and detail."
-  },
-  {
-    id: "tattoo-touch-ups",
-    name: "Tattoo Touch-Ups",
-    category: "AFTERCARE & FINISHING",
-    icon: Sparkles,
-    image: pexelsImage("7203741"),
-    description: "Careful refresh sessions for healed tattoos that need sharper lines or restored contrast."
+    description: "Get stylish and safe body piercings at our Ranchi studio. We offer ear, nose, eyebrow, lip, and cartilage piercings with professional care and high-quality jewelry for a trendy, comfortable, and hygienic experience.",
+    detailText: "Piercing at Oracle Tattoo is planned around safe placement, clean tools, and comfortable healing. We guide you on jewelry, aftercare, and placement before the piercing is done.",
+    detailPoints: [
+      "Ear, nose, eyebrow, lip, and cartilage piercing options",
+      "Hygienic setup with professional placement checks",
+      "Aftercare guidance for clean and comfortable healing"
+    ]
   }
 ];
 
 export const serviceCategories = [
-  "TATTOO SERVICES",
-  "PIERCING SERVICES",
-  "AFTERCARE & FINISHING"
+  "Religious Tattoos",
+  "Band Tattoos",
+  "Small Tattoos",
+  "Portrait",
+  "Piercings",
+  "Animal Tattoos"
 ];

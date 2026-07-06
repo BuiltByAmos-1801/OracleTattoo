@@ -8,8 +8,8 @@ import Logo from "./Logo.jsx";
 const navLinks = [
   { label: "Home", to: "/" },
   { label: "Services", to: "/services" },
-  { label: "Gallery", to: "/gallery" },
   { label: "Artists", to: "/artists" },
+  { label: "Gallery", to: "/gallery" },
   { label: "Booking", to: "/booking" },
   { label: "Contact", to: "/contact" },
   { label: "Blog", to: "/blog" }
@@ -134,7 +134,7 @@ export default function Navbar() {
                 ))}
               </div>
               <motion.div variants={linkVariants} className="flex flex-col gap-3 border-t border-white/12 pt-8 text-sm text-bone/64 sm:flex-row sm:justify-between">
-                <span>First floor, NH 75, Ratu Rd, Tilta, Ranchi</span>
+                <span>217b, 2nd floor Patliputra Kurji Rd, New Patliputra Colony, Opposite-Punjab National Bank, Golamber, Patna, Bihar 800013</span>
                 <a href="tel:+917667059851" className="text-bone">+91 76670 59851</a>
               </motion.div>
             </motion.div>

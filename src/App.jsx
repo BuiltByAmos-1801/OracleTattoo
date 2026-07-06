@@ -7,12 +7,14 @@ import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
 import Services from "./pages/Services.jsx";
 import ServiceDetail from "./pages/ServiceDetail.jsx";
-import Gallery from "./pages/Gallery.jsx";
 import Artists from "./pages/Artists.jsx";
 import JennyDetail from "./pages/JennyDetail.jsx";
 import Booking from "./pages/Booking.jsx";
 import Contact from "./pages/Contact.jsx";
 import Blog from "./pages/Blog.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import GalleryCategoryDetail from "./pages/GalleryCategoryDetail.jsx";
+import ReligiousTattooDetail from "./pages/ReligiousTattooDetail.jsx";
 
 export default function App() {
   const location = useLocation();
@@ -29,12 +31,14 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
           <Route path="/services/:serviceId" element={<ServiceDetail />} />
-          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/religious-tattoos/:tattooId" element={<ReligiousTattooDetail />} />
           <Route path="/artists" element={<Artists />} />
           <Route path="/artists/jenny" element={<JennyDetail />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/gallery/:categoryId" element={<GalleryCategoryDetail />} />
         </Routes>
       </AnimatePresence>
       <Footer />

@@ -1,40 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowDown, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import PageTransition from "../components/PageTransition.jsx";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 import { demoImages } from "../data/demoImages.js";
 import { services } from "../data/services.js";
-import jennyOracleTattoo from "../images/Jenny_OracleTattoo.png.JPG";
+import landingPageImage from "../images/landingpageimage.jpeg";
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "TattooShop",
   name: "Oracle Tattoo",
-  description: "Oracle Tattoo is a tattoo studio in Ranchi, Jharkhand for custom tattoos, realism tattoos, religious tattoos, mandala tattoos, cover-up tattoos, piercings, and first-time tattoo guidance.",
+  description: "Oracle Tattoo is a tattoo studio in Patna, Jharkhand for portrait tattoos, religious tattoos, band tattoos, small tattoos, piercings, and animal tattoos.",
   image: "",
   address: {
     "@type": "PostalAddress",
-    streetAddress: "First floor, NH 75, Ratu Rd, beside Devi Mandap, opp. Sharda Automobiles TVS, Tilta",
-    addressLocality: "Ranchi",
-    addressRegion: "Jharkhand",
-    postalCode: "835222",
+    streetAddress: "217b, 2nd floor Patliputra Kurji Rd, New Patliputra Colony, Opposite-Punjab National Bank, Golamber",
+    addressLocality: "Patna",
+    addressRegion: "Bihar",
+    postalCode: "800013",
     addressCountry: "IN"
   },
   telephone: "+917667059851",
   openingHours: ["Mo-Sa 11:00-20:00"],
   url: "https://www.oracletattoo.in",
   priceRange: "$$",
-  areaServed: ["Ranchi", "Tilta", "Ratu Road", "Jharkhand"],
-  keywords: "best tattoo in Ranchi, tattoo in Ranchi, tattoo studio Ranchi, tattoo shop Ranchi, tattoo artist Ranchi, piercing in Ranchi, custom tattoo Ranchi, religious tattoo Ranchi, cover-up tattoo Ranchi",
+  areaServed: ["Patna", "Jharkhand"],
+  keywords: "best tattoo in Patna, tattoo in Patna, portrait tattoo Patna, religious tattoo Patna, band tattoo Patna, small tattoo Patna, animal tattoo Patna",
   sameAs: ["https://www.instagram.com/oracletattooindia"]
 };
 
 const testimonials = [
   "The consultation felt personal, the studio was spotless, and the final tattoo healed beautifully.",
-  "Clean linework, patient artists, and no rushed energy. Oracle is exactly what Ranchi needed.",
+  "Clean linework, patient artists, and no rushed energy. Oracle is exactly what Patna needed.",
   "I came in with an old tattoo I hated. They rebuilt it into something I am proud to wear."
 ];
 
@@ -45,16 +45,26 @@ const storyHighlights = [
   "Custom work for every story"
 ];
 
-const galleryImageByCategory = (category) =>
-  demoImages.gallery.find((item) => item.category === category)?.image || demoImages.gallery[0].image;
-
-const tattooCategories = [
-  { title: "Religious Tattoos", image: galleryImageByCategory("Religious Tattoos") },
-  { title: "Realism Tattoos", image: galleryImageByCategory("Portrait") },
-  { title: "Mandala Tattoos", image: demoImages.gallery.find((item) => item.title === "Sacred floral mandala")?.image || galleryImageByCategory("Religious Tattoos") },
-  { title: "Cover-Up Tattoos", image: demoImages.hygiene },
-  { title: "Lettering Tattoos", image: galleryImageByCategory("Small Tattoos") },
-  { title: "Piercings", image: galleryImageByCategory("Piercings") }
+const categoryOrder = ["Religious Tattoos", "Band Tattoos", "Small Tattoos", "Portrait", "Piercings", "Animal Tattoos"];
+const animalPortfolioImages = services.find((service) => service.category === "Animal Tattoos")?.images ?? [];
+const portfolioItems = [
+  { id: "religious-1", category: "Religious Tattoos", src: demoImages.featured[0], alt: "Religious tattoo portfolio piece", spanClass: "md:col-span-2 md:row-span-2" },
+  { id: "religious-2", category: "Religious Tattoos", src: demoImages.featured[1], alt: "Religious tattoo portfolio detail", spanClass: "" },
+  { id: "religious-3", category: "Religious Tattoos", src: demoImages.services[0], alt: "Religious tattoo portfolio work", spanClass: "" },
+  { id: "band-1", category: "Band Tattoos", src: demoImages.featured[2], alt: "Band tattoo portfolio piece", spanClass: "md:col-span-2" },
+  { id: "band-2", category: "Band Tattoos", src: demoImages.featured[3], alt: "Band tattoo portfolio detail", spanClass: "" },
+  { id: "band-3", category: "Band Tattoos", src: demoImages.services[1], alt: "Band tattoo portfolio work", spanClass: "" },
+  { id: "small-1", category: "Small Tattoos", src: demoImages.featured[4], alt: "Small tattoo portfolio piece", spanClass: "" },
+  { id: "small-2", category: "Small Tattoos", src: demoImages.featured[5], alt: "Small tattoo portfolio detail", spanClass: "md:col-span-2" },
+  { id: "small-3", category: "Small Tattoos", src: demoImages.services[2], alt: "Small tattoo portfolio work", spanClass: "" },
+  { id: "portrait-1", category: "Portrait", src: demoImages.featured[6], alt: "Portrait tattoo portfolio piece", spanClass: "md:col-span-2 md:row-span-2" },
+  { id: "portrait-2", category: "Portrait", src: demoImages.services[3], alt: "Portrait tattoo portfolio detail", spanClass: "" },
+  { id: "portrait-3", category: "Portrait", src: demoImages.artists[0], alt: "Portrait tattoo reference work", spanClass: "" },
+  { id: "piercing-1", category: "Piercings", src: demoImages.consultation, alt: "Piercing consultation and studio setup", spanClass: "" },
+  { id: "piercing-2", category: "Piercings", src: demoImages.services[5], alt: "Piercing service portfolio detail", spanClass: "md:col-span-2" },
+  { id: "animal-1", category: "Animal Tattoos", src: animalPortfolioImages[0] ?? demoImages.services[4], alt: "Animal tattoo portfolio piece", spanClass: "md:col-span-2" },
+  { id: "animal-2", category: "Animal Tattoos", src: animalPortfolioImages[1] ?? demoImages.services[5], alt: "Animal tattoo portfolio detail", spanClass: "" },
+  { id: "animal-3", category: "Animal Tattoos", src: animalPortfolioImages[2] ?? demoImages.blog[0], alt: "Animal tattoo studio work", spanClass: "" }
 ];
 
 const processSteps = [
@@ -109,72 +119,88 @@ const faqs = [
 const bookingWhatsAppLink = "https://wa.me/917667059851?text=Hi%20Oracle%20Tattoo%2C%20I%20want%20to%20book%20an%20appointment.";
 
 export default function Home() {
-  const { scrollY } = useScroll();
-  const heroY = useTransform(scrollY, [0, 700], [0, 150]);
-  const heroOpacity = useTransform(scrollY, [0, 600], [1, 0.38]);
-  const heroImageY = useTransform(scrollY, [0, 700], [0, -90]);
+  const orderedServices = categoryOrder
+    .map((category) => services.find((service) => service.category === category))
+    .filter(Boolean);
+  const heroImages = orderedServices
+    .filter((service) => service.image && service.category !== "Band Tattoos")
+    .slice(0, 4);
+  const heroCollageImages = [
+    heroImages[0],
+    { id: "landing-page-feature", name: "Custom Tattoo", image: landingPageImage },
+    ...heroImages.slice(1, 3)
+  ].filter(Boolean);
 
   return (
     <PageTransition>
       <Helmet>
-        <title>Best Tattoo in Ranchi | Oracle Tattoo Studio Jharkhand</title>
-        <meta name="description" content="Looking for the best tattoo in Ranchi? Oracle Tattoo is a custom tattoo and piercing studio in Tilta, Ranchi for realism, mandala, religious, sleeve, cover-up, and first tattoos." />
-        <meta name="keywords" content="best tattoo in Ranchi, tattoo in Ranchi, tattoo studio Ranchi, tattoo shop Ranchi, tattoo artist Ranchi, best tattoo artist in Ranchi, piercing in Ranchi, custom tattoo Ranchi, religious tattoo Ranchi, cover up tattoo Ranchi, Oracle Tattoo Ranchi" />
+        <title>Best Tattoo in Patna | Oracle Tattoo Studio Jharkhand</title>
+        <meta name="description" content="Looking for the best tattoo in Patna? Oracle Tattoo is a custom tattoo studio in Patna for portrait tattoos, religious tattoos, band tattoos, small tattoos, piercings, and animal tattoos." />
+        <meta name="keywords" content="best tattoo in Patna, tattoo in Patna, tattoo studio Patna, tattoo shop Patna, tattoo artist Patna, portrait tattoo Patna, religious tattoo Patna, band tattoo Patna, small tattoo Patna, animal tattoo Patna" />
         <link rel="canonical" href="https://www.oracletattoo.in/" />
         <script type="application/ld+json">{JSON.stringify(schema)}</script>
       </Helmet>
 
-      <section className="relative flex min-h-[92svh] items-center overflow-hidden bg-ink pt-24 sm:min-h-screen sm:pt-28">
-        <motion.img
-          src={demoImages.studio}
-          alt="Professional tattoo artist working in a studio"
-          className="absolute inset-0 h-full w-full object-cover object-[52%_center] sm:object-center"
-          style={{ y: heroImageY }}
-        />
-        <div className="absolute inset-0 bg-black/70 sm:bg-black/62" />
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.74)_36%,rgba(0,0,0,0.36)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black to-transparent" />
-        <motion.div className="section-shell relative z-10 max-w-[1480px]" style={{ y: heroY, opacity: heroOpacity }}>
-          <div className="max-w-[680px] pt-16 sm:pt-20 lg:max-w-[760px]">
-            <h1 className="max-w-[12ch] text-[clamp(3rem,10vw,7.5rem)] font-black uppercase leading-[1.04] text-balance sm:leading-[0.98]">
-              Welcome to Oracle Tattoo
+      <section className="relative overflow-hidden bg-white pt-20 text-[#111a15] sm:pt-24 lg:pt-24">
+        <div className="section-shell grid min-h-[calc(100svh-5rem)] gap-6 py-5 sm:py-7 lg:grid-cols-[0.98fr_1fr] lg:items-center lg:gap-12 lg:py-8">
+          <ScrollReveal className="order-2 lg:order-1">
+            <div className="grid h-[320px] grid-cols-4 overflow-hidden border border-black/10 bg-black/5 shadow-[0_24px_70px_rgba(0,0,0,0.08)] sm:h-[420px] lg:h-[500px]">
+              {heroCollageImages.slice(0, 4).map((service, index) => (
+                <motion.img
+                  key={service.id}
+                  src={service.image}
+                  alt={`${service.name} at Oracle Tattoo`}
+                  className={`h-full w-full object-cover grayscale-[12%] saturate-[1.08] ${
+                    index % 2 === 0 ? "object-center" : "object-[52%_center]"
+                  }`}
+                  initial={{ scale: 1.08, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                />
+              ))}
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={0.08} className="order-1 lg:order-2">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-black/62">We are here for you</p>
+            <h1 className="mt-2 text-[clamp(3rem,7.2vw,6.5rem)] font-black leading-[0.86] tracking-[-0.02em] text-[#111a15]">
+              Oracle Tattoo
             </h1>
-            <p className="mt-7 max-w-[34rem] text-lg font-medium leading-8 text-white/80 sm:mt-8 sm:text-xl sm:leading-9 lg:text-2xl lg:leading-10">
-              A bold custom tattoo studio in Ranchi for clean blackwork, realism, meaningful designs, and a safe personal tattoo experience from idea to healing.
+            <p className="mt-5 max-w-3xl text-sm font-bold uppercase leading-7 tracking-[0.03em] text-black/76 sm:text-base sm:leading-8">
+              Oracle Tattoo Patna is a custom tattoo studio for clean portraits, religious tattoos, band designs, minimal pieces, piercings, and animal-inspired artwork.
             </p>
-            <div className="mt-8 flex flex-col items-start gap-4 sm:mt-10 md:hidden">
+            <div className="my-5 h-px w-full max-w-2xl bg-black/14 sm:my-6" />
+            <div className="grid max-w-3xl gap-3 text-sm font-semibold leading-7 text-black/70 sm:text-base sm:leading-8">
+              <p>
+                We plan every tattoo around your story, placement, skin tone, and long-term clarity. From the first idea to the final aftercare note, the process stays personal and calm.
+              </p>
+              <p>
+                Our studio follows strong hygiene standards, single-use needles, professional equipment, and clear consultation before tattooing, so your design feels safe, sharp, and built to last.
+              </p>
+            </div>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
                 href={bookingWhatsAppLink}
-                className="inline-flex min-h-16 w-fit items-center justify-center rounded-lg border border-white/18 bg-bone px-8 text-lg font-extrabold text-ink shadow-[0_18px_42px_rgba(255,255,255,0.14)] transition hover:-translate-y-0.5 hover:bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bone sm:px-10"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-black px-7 text-sm font-black uppercase tracking-[0.12em] text-white transition hover:-translate-y-0.5 hover:bg-[#202820]"
                 target="_blank"
                 rel="noreferrer"
               >
-                Book Your Appointment
+                Book Appointment
               </a>
+              <Link
+                to="/gallery"
+                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-black/14 px-7 text-sm font-black uppercase tracking-[0.12em] text-black transition hover:-translate-y-0.5 hover:border-black/38"
+              >
+                View Gallery
+              </Link>
             </div>
-          </div>
-        </motion.div>
-        <div className="section-shell pointer-events-none absolute inset-x-0 top-[58%] z-20 hidden -translate-y-1/2 justify-end md:flex">
-          <a
-            href={bookingWhatsAppLink}
-            className="pointer-events-auto inline-flex min-h-16 w-fit items-center justify-center rounded-lg border border-white/18 bg-bone px-10 text-lg font-extrabold text-ink shadow-[0_18px_42px_rgba(255,255,255,0.14)] transition hover:-translate-y-0.5 hover:bg-mist focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bone"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Book Your Appointment
-          </a>
-        </div>
-        <div className="absolute bottom-6 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2 text-bone/56 sm:bottom-8 sm:gap-3">
-          <span className="text-[0.64rem] font-bold uppercase tracking-[0.24em]">Scroll</span>
-          <motion.span animate={{ y: [0, 10, 0] }} transition={{ duration: 1.7, repeat: Infinity, ease: "easeInOut" }}>
-            <ArrowDown size={18} />
-          </motion.span>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="border-y border-white/10 bg-ink">
         <div className="section-shell grid gap-px overflow-hidden bg-white/10 text-center sm:grid-cols-2 lg:grid-cols-4">
-          {["Custom Tattoo Studio", "Hygienic Setup", "Tilta, Ranchi", "Mon-Sat, 11 AM-8 PM"].map((item) => (
+          {["Custom Tattoo Studio", "Hygienic Setup", "Patna", "Mon-Sat, 11 AM-8 PM"].map((item) => (
             <div key={item} className="bg-ink px-4 py-5 text-[0.62rem] font-bold uppercase tracking-[0.16em] text-bone/68 sm:px-5 sm:py-7 sm:text-xs sm:tracking-[0.2em]">
               {item}
             </div>
@@ -199,7 +225,7 @@ export default function Home() {
               ))}
             </div>
             <p className="max-w-3xl text-base leading-7 text-bone/66 sm:text-xl sm:leading-9">
-              Share your memory, belief, symbol, portrait, or cover-up idea. Oracle Tattoo shapes it into a clean custom design with the right flow, detail, and placement for your skin.
+              Share your memory, belief, symbol, portrait, or animal-inspired idea. Oracle Tattoo shapes it into a clean custom design with the right flow, detail, and placement for your skin.
             </p>
             <div className="mt-8 grid gap-px overflow-hidden bg-white/10 sm:grid-cols-2">
               {storyHighlights.map((point) => (
@@ -216,8 +242,8 @@ export default function Home() {
         <div className="section-shell grid gap-8 sm:gap-10 lg:grid-cols-[0.9fr_1.35fr] lg:items-center">
           <ScrollReveal className="relative overflow-hidden bg-coal">
             <img
-              src={jennyOracleTattoo}
-              alt="Oracle Tattoo studio artist Jenny"
+              src={landingPageImage}
+              alt="Oracle Tattoo studio landing page"
               className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
             />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_42%,#050505_100%)]" />
@@ -226,7 +252,7 @@ export default function Home() {
           <ScrollReveal delay={0.08}>
             <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Studio Introduction</p>
             <h2 className="serif-display text-[clamp(2rem,6.5vw,7.6rem)] leading-[0.94] sm:leading-[0.92]">
-              Best Tattoo Studio in Ranchi
+              Best Tattoo Studio in Patna
             </h2>
             <div className="mt-6 grid max-w-3xl gap-4 text-base leading-7 text-bone/64 sm:mt-8 sm:text-lg sm:leading-8">
               <p>
@@ -257,35 +283,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-ink py-12 sm:py-16 md:py-24">
-        <div className="section-shell">
-          <ScrollReveal className="mb-8 flex flex-col gap-4 sm:mb-10 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Explore styles</p>
-              <h2 className="section-display mt-3 sm:mt-4">Find the design that connects.</h2>
-            </div>
-            <Link to="/gallery" className="group inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.18em] text-bone">
-              View gallery <ArrowRight className="transition-transform group-hover:translate-x-1" size={18} />
-            </Link>
-          </ScrollReveal>
-          <div className="custom-scrollbar -mx-1 flex gap-4 overflow-x-auto px-1 pb-5 sm:gap-5">
-            {tattooCategories.map((category) => (
-              <ScrollReveal key={category.title} className="group relative min-w-[72vw] overflow-hidden border border-white/10 bg-coal sm:min-w-[280px] lg:min-w-[320px]">
-                <img
-                  src={category.image}
-                  alt={category.title}
-                  className="aspect-[4/5] w-full object-cover opacity-78 transition duration-700 group-hover:scale-105 group-hover:opacity-95"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                <h3 className="absolute bottom-5 left-5 right-5 text-2xl font-black uppercase leading-tight text-bone sm:text-3xl">
-                  {category.title}
-                </h3>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section className="py-12 sm:py-16 md:py-28">
         <div className="section-shell">
           <ScrollReveal className="mb-8 flex flex-col gap-4 sm:mb-10 sm:gap-5 md:flex-row md:items-end md:justify-between">
@@ -304,7 +301,7 @@ export default function Home() {
             viewport={{ once: true, amount: 0.2 }}
             variants={{ visible: { transition: { staggerChildren: 0.045 } } }}
           >
-            {services.map((service, index) => (
+            {orderedServices.map((service, index) => (
               <motion.article
                 key={service.id}
                 className="min-h-[220px] min-w-[82vw] border border-white/12 bg-coal p-5 sm:min-h-[260px] sm:min-w-[280px] sm:p-7 md:min-w-[340px]"
@@ -322,17 +319,17 @@ export default function Home() {
       <section className="bg-coal py-12 sm:py-16 md:py-28">
         <div className="section-shell">
           <ScrollReveal className="mb-8 sm:mb-12">
-            <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Featured Work</p>
+            <p className="text-xs font-bold uppercase tracking-[0.24em] text-bone/46">Gallery / Portfolio</p>
             <h2 className="section-display-lg mt-3 max-w-4xl sm:mt-4">A sharper eye for black, skin, and silence.</h2>
           </ScrollReveal>
           <div className="grid gap-4 sm:gap-5 md:grid-cols-4 md:auto-rows-[220px] lg:auto-rows-[300px]">
-            {demoImages.featured.map((image, index) => (
+            {portfolioItems.map((item, index) => (
               <ScrollReveal
-                key={image}
-                delay={index * 0.05}
-                className={`overflow-hidden border border-white/10 bg-ink ${index === 0 ? "md:col-span-2 md:row-span-2" : ""} ${index === 3 || index === 4 || index === 6 ? "md:col-span-2" : ""}`}
+                key={item.id}
+                delay={index * 0.04}
+                className={`overflow-hidden border border-white/10 bg-ink ${item.spanClass ?? ""}`}
               >
-                <img src={image} alt="Oracle Tattoo featured studio work" className="h-full min-h-[220px] w-full object-cover transition duration-700 hover:scale-105 sm:min-h-[280px]" />
+                <img src={item.src} alt={item.alt} className="h-full min-h-[220px] w-full object-cover transition duration-700 hover:scale-105 sm:min-h-[280px]" />
               </ScrollReveal>
             ))}
           </div>

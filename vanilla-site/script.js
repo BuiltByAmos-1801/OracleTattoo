@@ -23,56 +23,26 @@ const images = {
   ].map(asset)
 };
 
-const gallery = [
-  ["Memorial Tattoos", "Screenshot 2026-06-06 233324.png", "Lira Memorial Wings", "A delicate back-neck memorial tattoo with angel wings, a halo, paw detail, and script lettering."],
-  ["Small Tattoos", "Screenshot 2026-06-06 233340.png", "Minimal Cosmic Spark", "A compact fine-line starburst with tiny celestial accents for a subtle forearm placement."],
-  ["Small Tattoos", "Screenshot 2026-06-06 233350.png", "Mystic Eye Linework", "Fine-line hands, eye, moon, and cloud details arranged as a balanced symbolic arm piece."],
-  ["Lettering", "Screenshot 2026-06-06 233400.png", "Sanskrit Forearm Lettering", "Bold Devanagari script with clean curves and dark fill, placed vertically for readability."],
-  ["Religious Tattoos", "Screenshot 2026-06-06 233415.png", "Trishul Om Armband", "A spiritual armband combining Om, trishul-inspired forms, mountain detail, and shading."],
-  ["Religious Tattoos", "Screenshot 2026-06-06 233429.png", "Damru Om Symbol", "A devotional tattoo with damru, trishul flow, Om lettering, and black-grey shading."],
-  ["Lettering", "Screenshot 2026-06-06 233436.png", "555 Change Script", "Clean numerology and cursive lettering pairing bold 555 numbers with soft script."],
-  ["Band Tattoos", "Screenshot 2026-06-06 233447.png", "Geometric Black Band", "A sharp blackwork armband with negative-space geometry and a centered triangular motif."],
-  ["Lettering", "Screenshot 2026-06-06 233502.png", "Sword Initial Spine", "A slim back tattoo combining a vertical sword, initials, and fine detail."],
-  ["Small Tattoos", "Screenshot 2026-06-06 233522.png", "Serpent Moon Sternum", "A centered sternum design with serpent flow, moon, starburst, and ornamental dotwork."],
-  ["Lettering", "Screenshot 2026-06-06 233531.png", "Hindi Wrist Script", "A wrist lettering tattoo with flowing Hindi script and circular brush-stroke accents."],
-  ["Portrait", "Screenshot 2026-06-06 233550.png", "Shiva Realism Shoulder", "A large black-grey Lord Shiva portrait with smooth shading and strong shoulder placement."],
-  ["Small Tattoos", "Screenshot 2026-06-06 233607.png", "Lotus Ornament Sternum", "A symmetrical lotus and ornamental dotwork piece designed around the body center line."],
-  ["Portrait", "Screenshot 2026-06-06 233616.png", "Father And Child Portrait", "A sentimental framed portrait tattoo with floral accents and soft black-grey shading."],
-  ["Portrait", "Screenshot 2026-06-06 233635.png", "Tattoo Session Detail", "A studio process image showing careful machine work and controlled tattoo application."],
-  ["Small Tattoos", "Screenshot 2026-06-06 233700.png", "Radiant Lotus Forearm", "A fine black-grey lotus with rising sun rays, soft shading, and ornamental balance."],
-  ["Geometric Tattoos", "Screenshot 2026-06-06 233716.png", "Family Compass", "A compass tattoo with family quote lettering, circular geometry, and clean linework."],
-  ["Portrait", "tattooproject1.webp", "Buddha Forearm Portrait", "A calm Buddha portrait with soft black-grey shading and peaceful expression."],
-  ["Religious Tattoos", "tattooproject2.webp", "Trishul Damru Detail", "A devotional trishul and damru tattoo with bead accents and compact placement."],
-  ["Religious Tattoos", "tattooproject3.webp", "Ganesha Back Piece", "A large Ganesha tattoo with ornamental crown detail, bold linework, and back placement."],
-  ["Portrait", "tattooproject14.webp", "Shiva Black-Grey Portrait", "A detailed Lord Shiva shoulder portrait with deep contrast and sacred markings."]
-].map(([category, image, title, description]) => ({ category, image: asset(image), title, description }));
+const gallery = [];
+
+const siteCategories = ["Religious Tattoos", "Band Tattoos", "Small Tattoos", "Portrait", "Couples Tattoos", "Piercings"];
 
 const services = [
-  ["realistic-tattoos", "Realistic Tattoos", "TATTOO SERVICES", pexels("7147771", 900), "Realistic tattoos focus on fine details and natural shading to create artwork that feels alive."],
-  ["religious-tattoos", "Religious Tattoos", "TATTOO SERVICES", pexels("11178572", 900), "Sacred tattoo designs inspired by spiritual symbols, deities, and scriptures."],
-  ["couple-tattoo", "Couple Tattoo", "TATTOO SERVICES", pexels("13771118", 900), "A meaningful permanent symbol of love, trust, and deep connection."],
-  ["small-tattoo-designs", "Small Tattoo Designs", "TATTOO SERVICES", pexels("8258889", 900), "Subtle, stylish, meaningful small tattoos for wrists, fingers, ankles, and collarbones."],
-  ["custom-lettering", "Custom Tattoo Lettering", "TATTOO SERVICES", pexels("10435594", 900), "Refined scripts, names, quotes, and typographic tattoos composed for your body."],
-  ["mandala-tattoos", "Mandala Tattoos", "TATTOO SERVICES", pexels("4799384", 900), "Symmetric mandala work with calibrated spacing and crisp linework."],
-  ["sleeve-tattoos", "Sleeve Tattoos", "TATTOO SERVICES", pexels("1461816", 900), "Half and full sleeves designed as cohesive visual systems."],
-  ["polynesian-tribal", "Polynesian Tribal Tattoos", "TATTOO SERVICES", pexels("2183131", 900), "Bold tribal compositions shaped around rhythm, symbolism, and anatomical movement."],
-  ["piercing", "Piercing", "PIERCING SERVICES", pexels("7400018", 900), "Safe ear, nose, eyebrow, lip, and cartilage piercings with professional care."],
-  ["nose-piercing", "Nose Piercing", "PIERCING SERVICES", pexels("12435651", 900), "Precise nose piercing for studs or rings, focused on symmetry and healing."],
-  ["navel-piercing", "Navel Piercing", "PIERCING SERVICES", pexels("7230416", 900), "Clean navel piercing with placement guidance and clear aftercare direction."],
-  ["tattoo-aftercare", "Tattoo Aftercare", "AFTERCARE & FINISHING", pexels("7147769", 900), "Healing guidance and care routines that protect detail and saturation."],
-  ["cover-ups-reworkings", "Tattoo Cover-Ups & Reworkings", "AFTERCARE & FINISHING", pexels("12038947", 900), "Strategic redesigns that transform old tattoos into stronger, cleaner work."],
-  ["tattoo-design", "Tattoo Design", "AFTERCARE & FINISHING", pexels("7504856", 900), "Custom concept development before the first session."],
-  ["tattoo-finishing", "Tattoo Finishing", "AFTERCARE & FINISHING", pexels("8187555", 900), "Completion sessions that refine unfinished work with cleaner depth and balance."],
-  ["tattoo-touch-ups", "Tattoo Touch-Ups", "AFTERCARE & FINISHING", pexels("7203741", 900), "Refresh sessions for healed tattoos that need sharper lines or restored contrast."]
+  ["portrait-tattoos", "Portrait Tattoos", "TATTOO SERVICES", pexels("7147771", 900), "Portrait tattoos capture faces and lifelike subjects with realistic shading."],
+  ["religious-tattoos", "Religious Tattoos", "TATTOO SERVICES", pexels("11178572", 900), "Sacred tattoo designs inspired by spiritual symbols and scripture."],
+  ["band-tattoos", "Band Tattoos", "TATTOO SERVICES", pexels("2183131", 900), "Armband and wrist band tattoos with clean linework and geometric flow."],
+  ["small-tattoo-designs", "Small Tattoo Designs", "TATTOO SERVICES", pexels("8258889", 900), "Tiny fine-line and minimal tattoos for wrists, fingers, and ankles."],
+  ["couple-tattoo", "Couples Tattoos", "TATTOO SERVICES", pexels("13771118", 900), "Matching or complementary tattoos for partners and couples."],
+  ["piercing", "Piercings", "PIERCING SERVICES", pexels("7400018", 900), "Professional ear, nose, navel, and cartilage piercings with hygienic care."]
 ].map(([id, name, category, image, description]) => ({ id, name, category, image, description }));
 
 const blogPosts = [
-  ["Aftercare", "March 08, 2025", "Tattoo Aftercare Guide: How to Heal Your Tattoo Perfectly", images.featured[1], "Fresh tattoos need calm, clean healing. Learn the daily care routine that keeps linework crisp."],
-  ["Style Guide", "April 14, 2025", "Top Tattoo Styles in 2025 - Which One Is Right for You?", images.featured[0], "From realism to fine line and mandala, compare visual language, healing needs, and placement."],
-  ["Tribal", "May 22, 2025", "Polynesian & Tribal Tattoos: History, Meaning & Design Ideas", gallery[4].image, "Understand motifs, flow, and respect in tribal tattoo design before planning a statement piece."],
-  ["Beginner", "June 17, 2025", "Your First Tattoo in Ranchi? Here's Everything You Need to Know", gallery[1].image, "A practical first-timer guide covering consultation, pain, pricing, prep, and aftercare."],
-  ["Mandala", "August 09, 2025", "Mandala Tattoos: Symbolism, Styles and Placement Guide", gallery[12].image, "Explore how mandala tattoos use symmetry, sacred geometry, and body placement."],
-  ["Cover-Up", "October 03, 2025", "Cover-Up Tattoos: Can Any Tattoo Be Covered? Expert Answers", images.featured[4], "Learn what makes a cover-up possible and when reworking is smarter."]
+  ["Small Tattoos", "March 08, 2025", "Tattoo Aftercare Guide: How to Heal Your Tattoo Perfectly", images.featured[1], "Fresh tattoos need calm, clean healing. Learn the daily care routine that keeps linework crisp."],
+  ["Small Tattoos", "April 14, 2025", "Top Tattoo Styles in 2025 - Which One Is Right for You?", images.featured[0], "From fine line to minimal, compare visual language, healing needs, and placement."],
+  ["Small Tattoos", "May 22, 2025", "Polynesian & Tribal Tattoos: History, Meaning & Design Ideas", images.featured[2], "Understand motifs, flow, and respect in tribal tattoo design before planning a statement piece."],
+  ["Small Tattoos", "June 17, 2025", "Your First Tattoo in Ranchi? Here's Everything You Need to Know", images.featured[3], "A practical first-timer guide covering consultation, pain, pricing, prep, and aftercare."],
+  ["Small Tattoos", "August 09, 2025", "Mandala Tattoos: Symbolism, Styles and Placement Guide", images.featured[4], "Explore how mandala tattoos use symmetry, sacred geometry, and body placement."],
+  ["Small Tattoos", "October 03, 2025", "Cover-Up Tattoos: Can Any Tattoo Be Covered? Expert Answers", images.featured[5], "Learn what makes a cover-up possible and when reworking is smarter."]
 ].map(([category, date, title, image, excerpt]) => ({ category, date, title, image, excerpt }));
 
 const app = document.querySelector("#app");
@@ -107,13 +77,13 @@ const serviceCards = (items = services) => items.map((service) => `
 `).join("");
 
 function homePage() {
-  const cats = ["Religious Tattoos", "Portrait", "Small Tattoos", "Lettering", "Band Tattoos", "Geometric Tattoos"];
+  const cats = siteCategories;
   return `
     <section class="hero">
       <img src="${images.hero}" alt="Professional tattoo studio">
       <div class="section-shell hero-content">
         <h1 class="display">Welcome to Oracle Tattoo</h1>
-        <p class="lead">A bold custom tattoo studio in Ranchi for clean blackwork, realism, meaningful designs, and a safe personal tattoo experience from idea to healing.</p>
+        <p class="lead">A bold custom tattoo studio in Ranchi focused on portrait, religious, band, small, couple tattoos and professional piercings.</p>
         <div class="cta-row">
           <a class="cta" href="#/booking">Book Your Appointment</a>
           <a class="cta ghost" href="#/gallery">View Gallery</a>
@@ -205,7 +175,7 @@ function aboutPage() {
         <div class="reveal">
           <p class="eyebrow">About Oracle Tattoo</p>
           <h2 class="section-title">We are a professional tattoo studio.</h2>
-          <div class="copy-stack"><p>Our artists specialize in custom designs, fine line tattoos, detailed artwork, religious tattoos, cover-ups, and clean black-grey compositions tailored to your vision.</p></div>
+          <div class="copy-stack"><p>Our artists specialize in custom designs, fine line tattoos, detailed artwork, religious tattoos, band tattoos, small tattoos, couple tattoos, and clean black-grey compositions tailored to your vision.</p></div>
         </div>
         <div class="media-frame reveal"><img src="${images.studio}" alt="Inside Oracle Tattoo studio"></div>
       </div>
@@ -229,7 +199,7 @@ function aboutPage() {
 
 function servicesPage() {
   return `
-    ${pageHero({ image: images.consultation, eyebrow: "Home / Services", title: "Our Service", lead: "Explore realistic tattoos, religious designs, couple tattoos, small tattoo designs, and professional piercing services." })}
+    ${pageHero({ image: images.consultation, eyebrow: "Home / Services", title: "Our Service", lead: "Explore portrait tattoos, religious tattoos, band tattoos, small tattoo designs, couple tattoos, and professional piercing services." })}
     <section class="page-section">
       <div class="section-shell">
         <p class="eyebrow">What We Do</p>
@@ -241,9 +211,9 @@ function servicesPage() {
 }
 
 function galleryPage() {
-  const filters = ["All", ...new Set(gallery.map((item) => item.category))];
+  const filters = ["All", ...siteCategories];
   return `
-    ${pageHero({ image: images.galleryHero, eyebrow: "Oracle Tattoo Portfolio", title: "Ink that looks intentional.", lead: "A curated studio gallery for religious tattoos, realistic portraits, lettering, bands, and small pieces." })}
+    ${pageHero({ image: images.galleryHero, eyebrow: "Oracle Tattoo Portfolio", title: "Ink that looks intentional.", lead: "A curated studio gallery for portraits, religious tattoos, band work, small tattoos, couple pieces, and piercings." })}
     <section class="page-section">
       <div class="section-shell">
         <div class="filter-row">${filters.map((filter, index) => `<button class="${index === 0 ? "active" : ""}" data-filter="${filter}">${filter}</button>`).join("")}</div>
@@ -307,7 +277,7 @@ function bookingPage() {
 
 function contactPage() {
   return `
-    ${pageHero({ image: images.hero, eyebrow: "Contact", title: "Visit Oracle Tattoo", lead: "Reach us for consultation, tattoo planning, piercing, aftercare, or appointment confirmation." })}
+    ${pageHero({ image: images.hero, eyebrow: "Contact", title: "Visit Oracle Tattoo", lead: "Reach us for consultation, tattoo planning, piercing, or appointment confirmation." })}
     <section class="page-section">
       <div class="section-shell card-grid">
         <article class="card reveal"><small>Address</small><h3>Tilta, Ranchi</h3><p>First floor NH-75, Ratu Rd, beside Devi Mandap Tilta, Opp. Sharda Automobiles TVS, Jharkhand 835222.</p></article>
@@ -320,7 +290,7 @@ function contactPage() {
 
 function blogPage() {
   return `
-    ${pageHero({ image: images.blogHero, eyebrow: "Blog", title: "Tattoo Tips & Guides", lead: "Read studio guidance for first tattoos, aftercare, style choices, cover-ups, and piercing care.", className: "blog-hero" })}
+    ${pageHero({ image: images.blogHero, eyebrow: "Blog", title: "Tattoo Tips & Guides", lead: "Read studio guidance for first tattoos, style choices, and piercing care.", className: "blog-hero" })}
     <section class="page-section">
       <div class="section-shell card-grid">
         ${blogPosts.map((post) => `
