@@ -54,7 +54,16 @@ export default function Services() {
                   whileHover={{ y: -6 }}
                   className={`group overflow-hidden rounded-[28px] border border-white/10 bg-coal p-5 transition-shadow duration-400 hover:shadow-[0_26px_58px_rgba(0,0,0,0.25)] sm:p-6`}
                 >
-                  <div className="flex items-center gap-3 text-bone/70">
+                  {service.image && (
+                    <div className="overflow-hidden rounded-[28px] border border-white/10 bg-slate-950">
+                      <img
+                        src={service.image}
+                        alt={`${service.category} tattoo example`}
+                        className="h-44 w-full object-cover transition duration-700 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
+                  <div className="mt-5 flex items-center gap-3 text-bone/70">
                     <span className="grid h-11 w-11 place-items-center rounded-2xl bg-white/5 text-bone transition group-hover:bg-bone group-hover:text-ink">
                       <Icon size={22} />
                     </span>

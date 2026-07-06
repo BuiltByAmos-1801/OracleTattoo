@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -119,6 +119,7 @@ const faqs = [
 const bookingWhatsAppLink = "https://wa.me/917667059851?text=Hi%20Oracle%20Tattoo%2C%20I%20want%20to%20book%20an%20appointment.";
 
 export default function Home() {
+  const navigate = useNavigate();
   const orderedServices = categoryOrder
     .map((category) => services.find((service) => service.category === category))
     .filter(Boolean);
@@ -304,12 +305,22 @@ export default function Home() {
             {orderedServices.map((service, index) => (
               <motion.article
                 key={service.id}
-                className="min-h-[220px] min-w-[82vw] border border-white/12 bg-coal p-5 sm:min-h-[260px] sm:min-w-[280px] sm:p-7 md:min-w-[340px]"
+                onClick={() => navigate(`/services/${service.id}`)}
+                className="min-h-[260px] min-w-[82vw] cursor-pointer border border-white/12 bg-coal p-5 transition duration-200 hover:border-white/20 hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] sm:min-h-[320px] sm:min-w-[280px] sm:p-7 md:min-w-[340px]"
                 variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.58 } } }}
               >
-                <span className="text-xs font-semibold text-bone/40">{String(index + 1).padStart(2, "0")}</span>
-                <h3 className="mt-8 font-serif text-2xl leading-tight sm:mt-12 sm:text-3xl">{service.name}</h3>
-                <p className="mt-5 text-sm leading-6 text-bone/58">{service.description}</p>
+                {service.image && (
+                  <div className="overflow-hidden rounded-3xl border border-white/10 bg-[#050505]">
+                    <img
+                      src={service.image}
+                      alt={`${service.name} tattoo example`}
+                      className="h-44 w-full object-cover transition duration-700 hover:scale-105"
+                    />
+                  </div>
+                )}
+                <span className="mt-5 block text-xs font-semibold text-bone/40">{String(index + 1).padStart(2, "0")}</span>
+                <h3 className="mt-3 font-serif text-2xl leading-tight sm:mt-4 sm:text-3xl">{service.name}</h3>
+                <p className="mt-4 text-sm leading-6 text-bone/58">{service.description}</p>
               </motion.article>
             ))}
           </motion.div>

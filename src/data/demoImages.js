@@ -7,7 +7,7 @@ import featured03 from "../images/Screenshot 2026-06-06 235858.png";
 import featured04 from "../images/Screenshot 2026-06-06 235906.png";
 import featured05 from "../images/Screenshot 2026-06-06 235950.png";
 import featured06 from "../images/Screenshot 2026-06-07 000014.png";
-import featured07 from "../images/Screenshot 2026-06-07 000048.png";
+import featured07 from "../images/Screenshot 2026-06-07 000135.png";
 
 const unsplash = (id, width = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=88`;
