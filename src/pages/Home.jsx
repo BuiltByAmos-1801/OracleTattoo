@@ -8,7 +8,6 @@ import ScrollReveal from "../components/ScrollReveal.jsx";
 import { demoImages } from "../data/demoImages.js";
 import { services } from "../data/services.js";
 import landingPageImage from "../images/landingpageimage.jpeg";
-import jennyImage from "../images/jenny.jpg";
 
 const schema = {
   "@context": "https://schema.org",
@@ -129,7 +128,7 @@ export default function Home() {
     .slice(0, 4);
   const heroCollageImages = [
     heroImages[0],
-    { id: "landing-page-feature", name: "Jenny", image: jennyImage },
+    { id: "landing-page-feature", name: "Custom Tattoo", image: landingPageImage },
     ...heroImages.slice(1, 3)
   ].filter(Boolean);
 
