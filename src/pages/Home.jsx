@@ -8,6 +8,7 @@ import ScrollReveal from "../components/ScrollReveal.jsx";
 import { demoImages } from "../data/demoImages.js";
 import { services } from "../data/services.js";
 import landingPageImage from "../images/landingpageimage.jpeg";
+import jennyAuthor from "../images/jenny.jpg";
 
 const schema = {
   "@context": "https://schema.org",
@@ -243,8 +244,8 @@ export default function Home() {
         <div className="section-shell grid gap-8 sm:gap-10 lg:grid-cols-[0.9fr_1.35fr] lg:items-center">
           <ScrollReveal className="relative overflow-hidden bg-coal">
             <img
-              src={landingPageImage}
-              alt="Oracle Tattoo studio landing page"
+              src={jennyAuthor}
+              alt="Jenny — Oracle Tattoo author"
               className="aspect-[4/5] w-full object-cover object-center opacity-88 transition duration-700 hover:scale-105 hover:opacity-100 sm:aspect-[16/13] lg:aspect-[4/5]"
             />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_42%,#050505_100%)]" />
