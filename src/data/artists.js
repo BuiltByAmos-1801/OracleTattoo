@@ -33,4 +33,13 @@ export const artists = [
     image: demoImages.artists[3],
     detail: "Piercings, animal tattoo work, and intimate placement tattoos with precise detail."
   }
+  ,
+  {
+    name: "Artist 5",
+    specialization: "Portrait & Custom Work",
+    experience: "3 years experience",
+    handle: "@oracle.artist5",
+    image: demoImages.artists[4],
+    detail: "Custom portrait references and studio portraits showcasing recent work."
+  }
 ];

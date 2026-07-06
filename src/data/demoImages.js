@@ -8,6 +8,7 @@ import featured04 from "../images/Screenshot 2026-06-06 235906.png";
 import featured05 from "../images/Screenshot 2026-06-06 235950.png";
 import featured06 from "../images/Screenshot 2026-06-07 000014.png";
 import featured07 from "../images/Screenshot 2026-06-07 000135.png";
+import artistNew from "../images/artist_new.jpg";
 
 const unsplash = (id, width = 1200) =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=88`;
@@ -42,6 +43,7 @@ export const demoImages = {
     unsplash("photo-1542727365-19732a80dcfd", 900),
     unsplash("photo-1562962230-16e4623d36e6", 900),
     unsplash("photo-1542727365-19732a80dcfd", 900)
+    , artistNew
   ],
   blogHero: pexels("36170868", 1800),
   blog: [
